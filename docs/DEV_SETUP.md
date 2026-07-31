@@ -4,10 +4,10 @@ This guide assumes zero prior experience. Follow it in order — don't skip step
 
 ## Status
 - [x] Code editor (VS Code) — already installed
-- [ ] Git
-- [ ] Node.js
-- [ ] GitHub account
-- [ ] Project scaffolded
+- [x] Git
+- [x] Node.js
+- [x] GitHub account (github.com/Poojan-84)
+- [x] Project scaffolded
 - [ ] Vercel account + first deploy
 
 ## Step 1: Install Git

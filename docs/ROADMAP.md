@@ -6,19 +6,19 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 
 ### Completed ✅
 - Project documentation initialized (VISION, PRD, ARCHITECTURE, DEV_SETUP, DECISION_LOG, BACKLOG, CLAUDE.md)
+- Local development environment ready (Git, Node.js, GitHub account)
+- Next.js project scaffolded (TypeScript, App Router, Tailwind CSS) + first commit
 
 ### Current 🚧
-- Local development environment setup (Git, Node.js, project scaffold)
+- Push repo to GitHub, connect to Vercel, confirm live "hello world" deploy
 
 ### Next ⏭️
-- Tech stack finalization + Next.js project scaffold
-- Deploy a bare "hello world" version to production (proves the whole pipeline works end-to-end early)
-- Pokémon database: data model + first content batch
 - Site shell: navigation, homepage, mobile-first layout
+- Pokémon database: data model + first content batch
 
 ## Phase 1 milestones (Foundation)
-1. [ ] Dev environment ready (Git, Node, editor, terminal comfort)
-2. [ ] Project scaffolded and deployed (empty shell live on a real URL)
+1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
+2. [ ] Project scaffolded and deployed (empty shell live on a real URL) — scaffolded ✅, deploy pending
 3. [ ] Pokémon database — data model + first ~20 Pokémon as content
 4. [ ] Search functionality
 5. [ ] Tier list page(s)

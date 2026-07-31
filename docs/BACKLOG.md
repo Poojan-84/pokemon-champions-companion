@@ -1,17 +1,19 @@
 # Current Tasks / Backlog
 
 ## In progress
-- [ ] Install Git (Windows) — see DEV_SETUP.md Step 1
-- [ ] Install Node.js (Windows) — see DEV_SETUP.md Step 2
-- [ ] Create GitHub account — see DEV_SETUP.md Step 3
-
-## Up next (blocked until above is done)
-- [ ] Scaffold Next.js project
-- [ ] Push initial repo to GitHub
+- [ ] Push initial repo to GitHub (github.com/Poojan-84)
 - [ ] Connect repo to Vercel, confirm live deploy
+
+## Up next
 - [ ] Build homepage shell + navigation
 - [ ] Design Pokémon data model (what fields does each Pokémon entry need?)
 - [ ] Source/decide on data pipeline for Pokémon Champions stats
+
+## Done
+- [x] Install Git (Windows)
+- [x] Install Node.js (Windows)
+- [x] Create GitHub account (github.com/Poojan-84)
+- [x] Scaffold Next.js project (TypeScript, App Router, Tailwind CSS)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 - [ ] Pokémon database pages
