@@ -4,19 +4,12 @@ import { notFound } from "next/navigation";
 import { getAllPokemonIds, getPokemonById } from "@/lib/pokemon";
 import { TierBadge } from "@/components/TierBadge";
 import { TypeBadge } from "@/components/TypeBadge";
+import { StatBars } from "@/components/StatBars";
+import { Tag } from "@/components/Tag";
 
 interface PageProps {
   params: Promise<{ id: string }>;
 }
-
-const STAT_LABELS: { key: "hp" | "atk" | "def" | "spAtk" | "spDef" | "spe"; label: string }[] = [
-  { key: "hp", label: "HP" },
-  { key: "atk", label: "Attack" },
-  { key: "def", label: "Defense" },
-  { key: "spAtk", label: "Sp. Attack" },
-  { key: "spDef", label: "Sp. Defense" },
-  { key: "spe", label: "Speed" },
-];
 
 export async function generateStaticParams() {
   return getAllPokemonIds().map((id) => ({ id }));
@@ -75,44 +68,40 @@ export default async function PokemonDetailPage({ params }: PageProps) {
         <div className="mt-4 space-y-6">
           <section>
             <h2 className="font-semibold">Base stats</h2>
-            <table className="mt-2 w-full text-sm">
-              <caption className="sr-only">{pokemon.name} base stats</caption>
-              <tbody>
-                {STAT_LABELS.map(({ key, label }) => (
-                  <tr key={key} className="border-b border-gray-100 dark:border-gray-800">
-                    <th scope="row" className="py-1 text-left font-normal text-gray-600 dark:text-gray-400">
-                      {label}
-                    </th>
-                    <td className="py-1 text-right font-medium">{pokemon.baseStats[key]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div className="mt-2">
+              <StatBars stats={pokemon.baseStats} />
+            </div>
           </section>
 
           <section>
             <h2 className="font-semibold">Abilities</h2>
-            <ul className="mt-2 list-inside list-disc">
+            <ul className="mt-2 flex flex-wrap gap-2">
               {pokemon.abilities.map((ability) => (
-                <li key={ability}>{ability}</li>
+                <li key={ability}>
+                  <Tag>{ability}</Tag>
+                </li>
               ))}
             </ul>
           </section>
 
           <section>
             <h2 className="font-semibold">Common moves</h2>
-            <ul className="mt-2 list-inside list-disc">
+            <ul className="mt-2 flex flex-wrap gap-2">
               {pokemon.commonMoves.map((move) => (
-                <li key={move}>{move}</li>
+                <li key={move}>
+                  <Tag>{move}</Tag>
+                </li>
               ))}
             </ul>
           </section>
 
           <section>
             <h2 className="font-semibold">Common items</h2>
-            <ul className="mt-2 list-inside list-disc">
+            <ul className="mt-2 flex flex-wrap gap-2">
               {pokemon.commonItems.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  <Tag>{item}</Tag>
+                </li>
               ))}
             </ul>
           </section>

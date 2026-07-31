@@ -10,7 +10,7 @@ export function TierBadge({ tier }: { tier: string }) {
   const style = TIER_STYLES[tier] ?? "bg-gray-300 text-gray-800";
   return (
     <span
-      className={`inline-flex items-center justify-center rounded-md px-2 py-0.5 text-sm font-bold ${style}`}
+      className={`inline-flex items-center justify-center rounded-full px-2.5 py-0.5 text-sm font-bold ${style}`}
       aria-label={`Tier ${tier}`}
     >
       {tier}
