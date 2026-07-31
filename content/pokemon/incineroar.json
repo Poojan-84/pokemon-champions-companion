@@ -1,0 +1,32 @@
+{
+  "id": "incineroar",
+  "nationalDexNumber": 727,
+  "name": "Incineroar",
+  "types": [
+    "Fire",
+    "Dark"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 115,
+    "def": 90,
+    "spAtk": 80,
+    "spDef": 90,
+    "spe": 60
+  },
+  "abilities": [
+    "Blaze",
+    "Intimidate"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "A",
+  "role": "Premier support pivot",
+  "commonMoves": ["Fake Out", "Flare Blitz", "Parting Shot", "Throat Chop"],
+  "commonItems": ["Sitrus Berry"],
+  "summary": "The format's most reliable support Pokemon — Intimidate, Fake Out pressure, and Parting Shot to pivot safely.",
+  "relatedGuideSlugs": []
+}

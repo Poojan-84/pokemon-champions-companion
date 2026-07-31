@@ -1,11 +1,9 @@
 # Current Tasks / Backlog
 
 ## In progress
-- [ ] Push initial repo to GitHub (github.com/Poojan-84)
-- [ ] Connect repo to Vercel, confirm live deploy
+- [ ] Build homepage shell + navigation
 
 ## Up next
-- [ ] Build homepage shell + navigation
 - [ ] Design Pokémon data model (what fields does each Pokémon entry need?)
 - [ ] Source/decide on data pipeline for Pokémon Champions stats
 
@@ -14,6 +12,8 @@
 - [x] Install Node.js (Windows)
 - [x] Create GitHub account (github.com/Poojan-84)
 - [x] Scaffold Next.js project (TypeScript, App Router, Tailwind CSS)
+- [x] Push initial repo to GitHub (github.com/Poojan-84/pokemon-champions-companion)
+- [x] Connect repo to Vercel, confirm live deploy: https://pokemon-champions-companion.vercel.app
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 - [ ] Pokémon database pages

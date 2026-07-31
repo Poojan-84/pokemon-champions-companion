@@ -1,0 +1,33 @@
+{
+  "id": "basculegion",
+  "nationalDexNumber": 902,
+  "name": "Basculegion",
+  "types": [
+    "Water",
+    "Ghost"
+  ],
+  "baseStats": {
+    "hp": 120,
+    "atk": 112,
+    "def": 65,
+    "spAtk": 80,
+    "spDef": 75,
+    "spe": 78
+  },
+  "abilities": [
+    "Swift Swim",
+    "Adaptability",
+    "Mold Breaker"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "S",
+  "role": "Choice Scarf revenge killer / wallbreaker",
+  "commonMoves": ["Wave Crash", "Last Respects", "Aqua Jet", "Flip Turn"],
+  "commonItems": ["Choice Scarf"],
+  "summary": "Punishes fainted teammates by getting stronger, then cleans up with Choice Scarf speed and Last Respects.",
+  "relatedGuideSlugs": []
+}

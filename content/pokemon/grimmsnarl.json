@@ -1,0 +1,33 @@
+{
+  "id": "grimmsnarl",
+  "nationalDexNumber": 861,
+  "name": "Grimmsnarl",
+  "types": [
+    "Dark",
+    "Fairy"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 120,
+    "def": 65,
+    "spAtk": 95,
+    "spDef": 75,
+    "spe": 60
+  },
+  "abilities": [
+    "Prankster",
+    "Frisk",
+    "Pickpocket"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/861.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Prankster dual-screens support",
+  "commonMoves": ["Spirit Break", "Reflect", "Light Screen", "Parting Shot"],
+  "commonItems": ["Light Clay"],
+  "summary": "Sets Reflect and Light Screen before your opponents can react, giving the whole team a defensive cushion.",
+  "relatedGuideSlugs": []
+}

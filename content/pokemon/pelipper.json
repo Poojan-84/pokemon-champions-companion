@@ -1,0 +1,33 @@
+{
+  "id": "pelipper",
+  "nationalDexNumber": 279,
+  "name": "Pelipper",
+  "types": [
+    "Water",
+    "Flying"
+  ],
+  "baseStats": {
+    "hp": 60,
+    "atk": 50,
+    "def": 100,
+    "spAtk": 95,
+    "spDef": 70,
+    "spe": 65
+  },
+  "abilities": [
+    "Keen Eye",
+    "Drizzle",
+    "Rain Dish"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/279.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "A",
+  "role": "Rain setter support",
+  "commonMoves": ["Hurricane", "Weather Ball", "Tailwind", "Protect"],
+  "commonItems": ["Sitrus Berry", "Focus Sash"],
+  "summary": "Sets Drizzle rain to power up water-type teammates and give Hurricane perfect accuracy.",
+  "relatedGuideSlugs": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "gholdengo",
+  "nationalDexNumber": 1000,
+  "name": "Gholdengo",
+  "types": [
+    "Steel",
+    "Ghost"
+  ],
+  "baseStats": {
+    "hp": 87,
+    "atk": 60,
+    "def": 95,
+    "spAtk": 133,
+    "spDef": 91,
+    "spe": 84
+  },
+  "abilities": [
+    "Good As Gold"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Special wallbreaker",
+  "commonMoves": ["Make It Rain", "Shadow Ball", "Nasty Plot", "Protect"],
+  "commonItems": ["Life Orb", "Choice Scarf"],
+  "summary": "Immune to entry hazards and status-inflicting moves thanks to Good as Gold, letting it wallbreak safely with Make It Rain.",
+  "relatedGuideSlugs": []
+}

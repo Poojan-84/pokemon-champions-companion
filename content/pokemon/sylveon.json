@@ -1,0 +1,31 @@
+{
+  "id": "sylveon",
+  "nationalDexNumber": 700,
+  "name": "Sylveon",
+  "types": [
+    "Fairy"
+  ],
+  "baseStats": {
+    "hp": 95,
+    "atk": 65,
+    "def": 65,
+    "spAtk": 110,
+    "spDef": 130,
+    "spe": 60
+  },
+  "abilities": [
+    "Cute Charm",
+    "Pixilate"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Pixilate special sweeper",
+  "commonMoves": ["Hyper Voice", "Quick Attack", "Hyper Beam", "Protect"],
+  "commonItems": ["Fairy Feather"],
+  "summary": "Turns Normal-type moves into Fairy-type with Pixilate, hitting both targets hard with Hyper Voice.",
+  "relatedGuideSlugs": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "kingambit",
+  "nationalDexNumber": 983,
+  "name": "Kingambit",
+  "types": [
+    "Dark",
+    "Steel"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 135,
+    "def": 120,
+    "spAtk": 60,
+    "spDef": 85,
+    "spe": 50
+  },
+  "abilities": [
+    "Defiant",
+    "Supreme Overlord",
+    "Pressure"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/983.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "S",
+  "role": "Physical wallbreaker / sweeper",
+  "commonMoves": ["Kowtow Cleave", "Sucker Punch", "Iron Head", "Swords Dance"],
+  "commonItems": ["Focus Sash", "Life Orb"],
+  "summary": "Hits hard with priority Sucker Punch and snowballs stronger the more Pokemon faint around it.",
+  "relatedGuideSlugs": []
+}

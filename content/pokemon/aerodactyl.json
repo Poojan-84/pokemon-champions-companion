@@ -1,0 +1,33 @@
+{
+  "id": "aerodactyl",
+  "nationalDexNumber": 142,
+  "name": "Aerodactyl",
+  "types": [
+    "Rock",
+    "Flying"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 105,
+    "def": 65,
+    "spAtk": 60,
+    "spDef": 75,
+    "spe": 130
+  },
+  "abilities": [
+    "Rock Head",
+    "Pressure",
+    "Unnerve"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Mega speed control + physical attacker",
+  "commonMoves": ["Rock Slide", "Dual Wingbeat", "Tailwind", "Protect"],
+  "commonItems": ["Aerodactylite"],
+  "summary": "Mega Evolves for extra power and speed, often setting Tailwind before switching to an all-out attacking role.",
+  "relatedGuideSlugs": []
+}

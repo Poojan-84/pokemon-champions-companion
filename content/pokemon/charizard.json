@@ -1,0 +1,32 @@
+{
+  "id": "charizard",
+  "nationalDexNumber": 6,
+  "name": "Charizard",
+  "types": [
+    "Fire",
+    "Flying"
+  ],
+  "baseStats": {
+    "hp": 78,
+    "atk": 84,
+    "def": 78,
+    "spAtk": 109,
+    "spDef": 85,
+    "spe": 100
+  },
+  "abilities": [
+    "Blaze",
+    "Solar Power"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "A",
+  "role": "Mega special sweeper (sun synergy)",
+  "commonMoves": ["Heat Wave", "Solar Beam", "Weather Ball", "Protect"],
+  "commonItems": ["Charizardite Y"],
+  "summary": "Mega Evolves into a powerful special attacker that boosts its own sun for extra damage and Solar Beam without a turn's wait.",
+  "relatedGuideSlugs": []
+}

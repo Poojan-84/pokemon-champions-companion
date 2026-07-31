@@ -1,0 +1,32 @@
+{
+  "id": "staraptor",
+  "nationalDexNumber": 398,
+  "name": "Staraptor",
+  "types": [
+    "Normal",
+    "Flying"
+  ],
+  "baseStats": {
+    "hp": 85,
+    "atk": 120,
+    "def": 70,
+    "spAtk": 50,
+    "spDef": 60,
+    "spe": 100
+  },
+  "abilities": [
+    "Intimidate",
+    "Reckless"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/398.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "A",
+  "role": "Speed control + Intimidate pivot (Mega)",
+  "commonMoves": ["Close Combat", "Brave Bird", "Tailwind", "Protect"],
+  "commonItems": ["Staraptorite"],
+  "summary": "Mega Evolves to gain Intimidate and strong dual STAB attacks, often carrying Tailwind for team speed.",
+  "relatedGuideSlugs": []
+}

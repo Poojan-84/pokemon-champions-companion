@@ -1,0 +1,31 @@
+{
+  "id": "floette-eternal",
+  "nationalDexNumber": 670,
+  "name": "Floette-Eternal",
+  "types": [
+    "Fairy"
+  ],
+  "baseStats": {
+    "hp": 74,
+    "atk": 65,
+    "def": 67,
+    "spAtk": 125,
+    "spDef": 128,
+    "spe": 92
+  },
+  "abilities": [
+    "Flower Veil",
+    "Symbiosis"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Mega special sweeper",
+  "commonMoves": ["Dazzling Gleam", "Moonblast", "Light of Ruin", "Calm Mind"],
+  "commonItems": ["Floettite"],
+  "summary": "Mega Evolves into a powerful special sweeper that can boost with Calm Mind or nuke immediately with Light of Ruin.",
+  "relatedGuideSlugs": []
+}

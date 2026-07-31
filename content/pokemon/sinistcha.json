@@ -1,0 +1,32 @@
+{
+  "id": "sinistcha",
+  "nationalDexNumber": 1013,
+  "name": "Sinistcha",
+  "types": [
+    "Grass",
+    "Ghost"
+  ],
+  "baseStats": {
+    "hp": 71,
+    "atk": 60,
+    "def": 106,
+    "spAtk": 121,
+    "spDef": 80,
+    "spe": 70
+  },
+  "abilities": [
+    "Hospitality",
+    "Heatproof"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "S",
+  "role": "Trick Room support / bulky special attacker",
+  "commonMoves": ["Matcha Gotcha", "Trick Room", "Rage Powder", "Shadow Ball"],
+  "commonItems": ["Leftovers", "Sitrus Berry"],
+  "summary": "Sets up Trick Room while redirecting attacks with Rage Powder, letting your slower hard-hitters move first.",
+  "relatedGuideSlugs": []
+}

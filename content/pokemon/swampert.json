@@ -1,0 +1,32 @@
+{
+  "id": "swampert",
+  "nationalDexNumber": 260,
+  "name": "Swampert",
+  "types": [
+    "Water",
+    "Ground"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 110,
+    "def": 90,
+    "spAtk": 85,
+    "spDef": 90,
+    "spe": 60
+  },
+  "abilities": [
+    "Torrent",
+    "Damp"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/260.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Mega bulky physical attacker (rain synergy)",
+  "commonMoves": ["Wave Crash", "Earthquake", "Ice Punch", "Protect"],
+  "commonItems": ["Swampertite"],
+  "summary": "Mega Evolves into a slow, extremely bulky attacker that hits harder in the rain and shrugs off most retaliation.",
+  "relatedGuideSlugs": []
+}

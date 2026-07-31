@@ -1,0 +1,33 @@
+{
+  "id": "sneasler",
+  "nationalDexNumber": 903,
+  "name": "Sneasler",
+  "types": [
+    "Fighting",
+    "Poison"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "atk": 130,
+    "def": 60,
+    "spAtk": 40,
+    "spDef": 80,
+    "spe": 120
+  },
+  "abilities": [
+    "Pressure",
+    "Unburden",
+    "Poison Touch"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Unburden speed sweeper",
+  "commonMoves": ["Close Combat", "Fake Out", "Dire Claw", "Protect"],
+  "commonItems": ["White Herb"],
+  "summary": "Once its held berry or item is consumed, Unburden doubles its Speed, turning it into a fast, hard-hitting cleaner.",
+  "relatedGuideSlugs": []
+}
