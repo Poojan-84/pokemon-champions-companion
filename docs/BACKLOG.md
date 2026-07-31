@@ -1,11 +1,10 @@
 # Current Tasks / Backlog
 
 ## In progress
-- [ ] Build homepage shell + navigation
+- [ ] Build search functionality
 
 ## Up next
-- [ ] Design Pokémon data model (what fields does each Pokémon entry need?)
-- [ ] Source/decide on data pipeline for Pokémon Champions stats
+- [ ] Build homepage shell + navigation
 
 ## Done
 - [x] Install Git (Windows)
@@ -14,10 +13,11 @@
 - [x] Scaffold Next.js project (TypeScript, App Router, Tailwind CSS)
 - [x] Push initial repo to GitHub (github.com/Poojan-84/pokemon-champions-companion)
 - [x] Connect repo to Vercel, confirm live deploy: https://pokemon-champions-companion.vercel.app
+- [x] Design Pokémon data model (content/pokemon/schema.md)
+- [x] Source/decide on data pipeline for Pokémon Champions stats (PokeAPI + scripts/fetch-pokemon.ts, hand-curated competitive fields)
+- [x] Pokémon database pages (/pokedex index + /pokedex/[id] detail template, 20 entries)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
-- [ ] Pokémon database pages
-- [ ] Search
 - [ ] Tier list page
 - [ ] Beginner guide(s)
 - [ ] Regulation summary page(s)
