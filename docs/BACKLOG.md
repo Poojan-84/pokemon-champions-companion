@@ -1,10 +1,10 @@
 # Current Tasks / Backlog
 
 ## In progress
-- [ ] Tier list page
+- [ ] Beginner guide(s)
 
 ## Up next
-- [ ] Beginner guide(s)
+- [ ] Regulation summary page(s)
 
 ## Done
 - [x] Install Git (Windows)
@@ -18,9 +18,9 @@
 - [x] Pokémon database pages (/pokedex index + /pokedex/[id] detail template, 20 entries)
 - [x] Build homepage shell + navigation (NavBar site-wide, real homepage per VISION.md)
 - [x] Build search functionality (client-side instant search in NavBar)
+- [x] Tier list page (/tier-list, grouped by tier, linked from NavBar)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
-- [ ] Regulation summary page(s)
 - [ ] Team archetype guide(s)
 - [ ] Sitemap + structured data + meta tags pass
 - [ ] Mobile QA + Core Web Vitals pass
