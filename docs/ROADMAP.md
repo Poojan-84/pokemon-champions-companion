@@ -11,18 +11,19 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Repo pushed to GitHub, connected to Vercel, live deploy confirmed: https://pokemon-champions-companion.vercel.app
 - Pokémon database: data model + 20 curated Pokémon entries, plus /pokedex index and detail page template (mobile-first, card-based, per VISION.md's 30-second rule)
 - Site shell: navigation (NavBar, mobile-first, no hamburger needed yet) + real homepage (per VISION.md, single CTA to /pokedex)
+- Search functionality: client-side instant search in NavBar, case-insensitive partial name match, no backend needed
 
 ### Current 🚧
-- Search functionality
+- Tier list page(s)
 
 ### Next ⏭️
-- Tier list page(s)
+- Beginner competitive guide(s)
 
 ## Phase 1 milestones (Foundation)
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
 2. [x] Project scaffolded and deployed — live at https://pokemon-champions-companion.vercel.app
 3. [x] Pokémon database — data model + first ~20 Pokémon as content, plus /pokedex index and detail page template
-4. [ ] Search functionality
+4. [x] Search functionality
 5. [ ] Tier list page(s)
 6. [ ] Beginner competitive guide(s)
 7. [ ] Regulation summary page(s)
