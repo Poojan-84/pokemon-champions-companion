@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   },
   description:
     "A fast, SEO-first companion site for Pokémon Champions — Pokédex, tier lists, and guides to help new and casual players make better competitive decisions faster.",
+  verification: {
+    google: "w3CkJUXTIOFloxK7ebAP9bwyFBkfbZ7MpswqIv56jeY",
+  },
 };
 
 export default function RootLayout({
