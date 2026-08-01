@@ -24,7 +24,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 (none — Phase 1 is done; Phase 2 sequencing to be decided together before work starts)
 
 ### Next ⏭️
-- Phase 2 (Tools), unordered until we decide on sequencing: team builder, rental team directory, matchup pages, type coverage checker, speed calculator
+- Phase 2 (Tools), unordered until we decide on sequencing: team builder, rental team directory (redefined — see Phase 2 milestones below), matchup pages, type coverage checker, speed calculator, guide page visual polish, visual identity pass
 
 ## Phase 1 milestones (Foundation) — ✅ COMPLETE
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -40,10 +40,12 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 
 ## Phase 2 milestones (Tools) — planning, sequencing not yet decided
 - Team builder MVP
-- Rental team directory
+- Rental team directory — redefined: curated, usage-ranked real teams (both 2-3 piece cores and full 6-Pokémon teams) sourced from tournament data. Effectively a "team tier list," distinct from the existing Pokémon-level Tier List — addresses founder feedback that Pokémon-level tiers alone don't show what's actually winning together
 - Matchup pages
 - Type coverage checker
 - Speed calculator
+- Guide page visual polish — callout boxes, section iconography, pull-quote treatment for existing guides
+- Visual identity pass — dedicated design pass across Pokédex/detail pages (palette, typography, spacing) beyond the current functional/accessible baseline
 
 ## Phase 3 milestones (Depth) — high level, detailed later
 - User accounts
