@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+// No `title` here on purpose: the root layout's `title.default` already
+// matches the desired homepage title exactly. If this page set its own
+// title string, the layout's "%s | Champions Companion" template would
+// apply and double-suffix it.
+export const metadata: Metadata = {
+  description:
+    "A fast, SEO-first companion site for Pokémon Champions — Pokédex, tier lists, and guides to help new and casual players make better competitive decisions faster.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

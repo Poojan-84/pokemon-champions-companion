@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPokemonIds, getPokemonById } from "@/lib/pokemon";
 import { TierBadge } from "@/components/TierBadge";
 import { TypeBadge } from "@/components/TypeBadge";
 import { StatBars } from "@/components/StatBars";
 import { Tag } from "@/components/Tag";
+import { JsonLd } from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -20,9 +23,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const pokemon = getPokemonById(id);
   if (!pokemon) return {};
 
+  // A meta description read out of context (search results) needs to name
+  // the Pokémon and the intent terms (tier, moves) explicitly — the UI
+  // summary alone assumes the name is already visible right above it.
+  const topMoves = pokemon.commonMoves.slice(0, 3).join(", ");
+  const description = `${pokemon.name} — Tier ${pokemon.tier} ${pokemon.role} in Pokémon Champions. Common moves: ${topMoves}.`;
+
   return {
     title: `${pokemon.name} — Tier ${pokemon.tier} Guide`,
-    description: pokemon.summary,
+    description,
+    alternates: { canonical: `/pokedex/${id}` },
   };
 }
 
@@ -34,9 +44,37 @@ export default async function PokemonDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const pageUrl = `${SITE_URL}/pokedex/${pokemon.id}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": pageUrl,
+    url: pageUrl,
+    name: `${pokemon.name} — Tier ${pokemon.tier} Guide`,
+    description: pokemon.summary,
+    // Schema.org has no dedicated "Pokémon"/game-character type, so we use
+    // the closest honest fit (Thing) rather than force a mismatched type
+    // like Person or Product.
+    mainEntity: {
+      "@type": "Thing",
+      name: pokemon.name,
+      description: pokemon.summary,
+      image: pokemon.spriteUrl ?? undefined,
+      identifier: String(pokemon.nationalDexNumber),
+      url: pageUrl,
+    },
+  };
+
   return (
     <main className="mx-auto max-w-2xl px-4 py-8">
-      <div className="flex items-center gap-4">
+      <JsonLd data={jsonLd} />
+      <Link
+        href="/pokedex"
+        className="text-sm text-gray-500 hover:underline dark:text-gray-400"
+      >
+        ← Pokédex
+      </Link>
+      <div className="mt-3 flex items-center gap-4">
         {pokemon.spriteUrl ? (
           <Image
             src={pokemon.spriteUrl}
@@ -52,7 +90,7 @@ export default async function PokemonDetailPage({ params }: PageProps) {
             {pokemon.types.map((type) => (
               <TypeBadge key={type} type={type} />
             ))}
-            <TierBadge tier={pokemon.tier} />
+            <TierBadge tier={pokemon.tier} href="/tier-list" />
           </div>
         </div>
       </div>
