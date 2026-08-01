@@ -28,6 +28,13 @@ export default function Home() {
       >
         Browse the Pokédex
       </Link>
+      <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        New here?{" "}
+        <Link href="/guides/beginner-overview" className="underline hover:no-underline">
+          Start with our Beginner Overview
+        </Link>
+        .
+      </p>
     </main>
   );
 }
