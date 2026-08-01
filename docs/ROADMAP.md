@@ -17,14 +17,16 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Beginner competitive guide: Markdown-based guides system + real Beginner Overview content, linked from homepage and Guides index
 - Regulation summary page: /guides/regulation-m-b covers the current regulation's rules and end date, cross-linked with the Beginner Overview, Tier List, and Pokédex
 - Mobile QA + performance pass: fixed 10 WCAG AA contrast failures and multiple sub-24px touch targets across the site, plus a nav-wrapping bug found along the way; all pages now score 100 on Lighthouse Accessibility (see DECISION_LOG.md)
+- Team archetype guide(s): /guides/team-archetypes covers four Reg M-B team structures (Sun Offense, Trick Room, Rain, Sand Offense), cross-linked with Tier List and Pokédex
+- **Phase 1 (Foundation) complete** — all 10 milestones shipped
 
 ### Current 🚧
-- Team archetype guide(s)
+(none — Phase 1 is done; Phase 2 sequencing to be decided together before work starts)
 
 ### Next ⏭️
-- Team archetype guide(s) is the last open Phase 1 milestone — once it ships, Phase 1 is complete
+- Phase 2 (Tools), unordered until we decide on sequencing: team builder, rental team directory, matchup pages, type coverage checker, speed calculator
 
-## Phase 1 milestones (Foundation)
+## Phase 1 milestones (Foundation) — ✅ COMPLETE
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
 2. [x] Project scaffolded and deployed — live at https://pokemon-champions-companion.vercel.app
 3. [x] Pokémon database — data model + first ~20 Pokémon as content, plus /pokedex index and detail page template
@@ -32,16 +34,16 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 5. [x] Tier list page(s)
 6. [x] Beginner competitive guide(s)
 7. [x] Regulation summary page(s)
-8. [ ] Team archetype guide(s)
+8. [x] Team archetype guide(s)
 9. [x] SEO fundamentals: sitemap, structured data, meta tags, internal linking pass
 10. [x] Mobile QA pass + performance pass (Core Web Vitals)
 
-## Phase 2 milestones (Tools) — high level, detailed later
+## Phase 2 milestones (Tools) — planning, sequencing not yet decided
 - Team builder MVP
 - Rental team directory
+- Matchup pages
 - Type coverage checker
 - Speed calculator
-- Matchup pages
 
 ## Phase 3 milestones (Depth) — high level, detailed later
 - User accounts

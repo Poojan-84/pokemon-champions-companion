@@ -1,10 +1,10 @@
 # Current Tasks / Backlog
 
 ## In progress
-- [ ] Team archetype guide(s)
+(nothing — Phase 1 is complete; Phase 2 sequencing not yet decided, see ROADMAP.md)
 
 ## Up next
-(nothing queued — Team archetype guide(s) is the last open Phase 1 item)
+(TBD — see ROADMAP.md Phase 2 planning)
 
 ## Done
 - [x] Install Git (Windows)
@@ -23,8 +23,10 @@
 - [x] Beginner guide(s) (Markdown guides system + Beginner Overview, linked from homepage)
 - [x] Regulation summary page(s) (/guides/regulation-m-b, cross-linked with Beginner Overview/Tier List/Pokédex)
 - [x] Mobile QA + Core Web Vitals pass (contrast/touch-target/nav-wrapping fixes, all pages 100 on Lighthouse Accessibility)
+- [x] Team archetype guide(s) (/guides/team-archetypes — Sun Offense, Trick Room, Rain, Sand Offense)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
+- [ ] Tyranitar and Excadrill are referenced in the Team Archetypes guide but not yet in the Pokédex database — include them in the next database expansion batch
 
 ## Icebox (Phase 2/3 — do not start early)
 - Team builder, rental directory, matchup pages, type coverage checker, speed calculator
