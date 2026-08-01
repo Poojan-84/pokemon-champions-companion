@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!pokemon) return {};
 
   return {
-    title: `${pokemon.name} — Pokémon Champions Tier ${pokemon.tier} Guide`,
+    title: `${pokemon.name} — Tier ${pokemon.tier} Guide`,
     description: pokemon.summary,
   };
 }

@@ -3,7 +3,7 @@ import { getAllPokemon } from "@/lib/pokemon";
 import { PokemonCard } from "@/components/PokemonCard";
 
 export const metadata: Metadata = {
-  title: "Pokédex | Pokémon Champions Companion",
+  title: "Pokédex",
   description:
     "Browse Pokémon Champions tier placements, roles, and competitive summaries at a glance.",
 };
