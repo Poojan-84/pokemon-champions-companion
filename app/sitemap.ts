@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/team-builder`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/type-coverage`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/rental-teams`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/speed-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   ];
 
   const pokemonRoutes: MetadataRoute.Sitemap = getAllPokemonIds().map((id) => ({

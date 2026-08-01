@@ -1,7 +1,7 @@
 # Current Tasks / Backlog
 
 ## In progress
-(nothing — Rental Team Directory real content pass just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
+(nothing — Speed Calculator just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
 
 ## Up next
 (TBD — see ROADMAP.md Phase 2 planning)
@@ -30,12 +30,13 @@
 - [x] Type Coverage Checker (/type-coverage — pick up to 6 Pokémon, see offensive type coverage from their commonMoves; NavBar + homepage grid updated to link it live)
 - [x] Rental Team Directory v1 (/rental-teams — Cores + Full Teams sections, content-as-data in content/rental-teams/*.json validated against real Pokémon ids, archetype links into /guides/team-archetypes; NavBar + homepage grid updated to link it live)
 - [x] Replaced the Rental Team Directory's placeholder with 8 real curated entries (5 cores, 3 full teams) sourced from Reg M-B tournament/usage data — see DECISION_LOG.md
+- [x] Speed Calculator (/speed-calculator — compare 2-6 Pokémon's calculated Speed and turn order, Tailwind/Trick Room/item/paralysis support, ability-modifier exclusion flagged inline; NavBar + homepage grid updated to link it live)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 - [ ] Add a Rain full team and a second Sand Offense full team to the Rental Team Directory once a verified real roster using only our 22 curated Pokémon is found (every real Rain team found so far includes Venusaur, which isn't in our database) — see DECISION_LOG.md
 
 ## Icebox (Phase 2/3 — do not start early)
-- Matchup pages, speed calculator
+- Matchup pages
 - Per-Pokémon meta builds (teammates, item %, move %, stat spreads, Mega toggle) — needs its own data-source decision before implementation; revisits the Phase 1 "no automated usage-stat sourcing" decision (see DECISION_LOG.md)
 - Damage calculator, tournament tracking, usage stats, user accounts, personalization
 - Battle pass / ranked status homepage tiles — deferred to end of Phase 3; no official API for personal player data, so informational-guide-only if built at all (see ROADMAP.md Phase 3 notes)

@@ -43,9 +43,14 @@ const LIVE_FEATURES = [
     href: "/rental-teams",
     description: "Curated cores and full teams from real tournament play.",
   },
+  {
+    title: "Speed Calculator",
+    href: "/speed-calculator",
+    description: "Compare Pokémon and see who moves first.",
+  },
 ];
 
-const COMING_SOON_FEATURES = ["Matchup Pages", "Speed Calculator"];
+const COMING_SOON_FEATURES = ["Matchup Pages"];
 
 export default function Home() {
   return (
