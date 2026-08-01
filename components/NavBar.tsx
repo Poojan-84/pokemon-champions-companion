@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { getAllPokemon } from "@/lib/pokemon";
+import { PokemonSearch } from "./PokemonSearch";
 
 export function NavBar() {
+  const pokemon = getAllPokemon().map((p) => ({
+    id: p.id,
+    name: p.name,
+    tier: p.tier,
+    spriteUrl: p.spriteUrl,
+  }));
+
   return (
     <header className="border-b border-gray-200 dark:border-gray-800">
       <nav
@@ -17,6 +26,9 @@ export function NavBar() {
           Pokédex
         </Link>
       </nav>
+      <div role="search" className="mx-auto max-w-3xl px-4 pb-3">
+        <PokemonSearch pokemon={pokemon} />
+      </div>
     </header>
   );
 }
