@@ -24,6 +24,7 @@ export const ITEM_ICONS: Record<string, LucideIcon> = {
   "Raichunite Y": Gem,
   Staraptorite: Gem,
   Swampertite: Gem,
+  Tyranitarite: Gem,
 
   "Choice Scarf": Gauge, // boosts Speed
   "Fairy Feather": Feather,

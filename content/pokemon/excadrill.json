@@ -1,0 +1,33 @@
+{
+  "id": "excadrill",
+  "nationalDexNumber": 530,
+  "name": "Excadrill",
+  "types": [
+    "Ground",
+    "Steel"
+  ],
+  "baseStats": {
+    "hp": 110,
+    "atk": 135,
+    "def": 60,
+    "spAtk": 50,
+    "spDef": 65,
+    "spe": 88
+  },
+  "abilities": [
+    "Sand Rush",
+    "Sand Force",
+    "Mold Breaker"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Sand Rush speed sweeper",
+  "commonMoves": ["Earthquake", "Iron Head", "Rock Slide", "Protect"],
+  "commonItems": ["Focus Sash", "Life Orb"],
+  "summary": "Doubles its Speed in sandstorm thanks to Sand Rush, turning from a slow attacker into one of the fastest threats in the format while sand is up.",
+  "relatedGuideSlugs": ["team-archetypes"]
+}

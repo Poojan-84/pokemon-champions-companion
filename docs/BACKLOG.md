@@ -26,9 +26,10 @@
 - [x] Team archetype guide(s) (/guides/team-archetypes — Sun Offense, Trick Room, Rain, Sand Offense)
 - [x] Deeper palette update, gradient stat bars, custom move/item/ability icon system, homepage feature grid (live + "Coming soon" tiles)
 - [x] Team Builder (/team-builder — 6-Pokémon team grid, Regulation M-B validation, type coverage summary, localStorage persistence, homepage grid updated to link it live)
+- [x] Added Tyranitar and Excadrill to the Pokédex database (fetched via scripts/fetch-pokemon.ts, curated fields hand-filled) and linked both inline from the Team Archetypes guide's Sand Offense section
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
-- [ ] Tyranitar and Excadrill are referenced in the Team Archetypes guide but not yet in the Pokédex database — include them in the next database expansion batch
+(none currently — see ROADMAP.md Phase 2 planning for what's up next)
 
 ## Icebox (Phase 2/3 — do not start early)
 - Rental directory, matchup pages, type coverage checker, speed calculator

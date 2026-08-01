@@ -1,0 +1,32 @@
+{
+  "id": "tyranitar",
+  "nationalDexNumber": 248,
+  "name": "Tyranitar",
+  "types": [
+    "Rock",
+    "Dark"
+  ],
+  "baseStats": {
+    "hp": 100,
+    "atk": 134,
+    "def": 110,
+    "spAtk": 95,
+    "spDef": 100,
+    "spe": 61
+  },
+  "abilities": [
+    "Sand Stream",
+    "Unnerve"
+  ],
+  "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/248.png",
+  "regulation": {
+    "legal": true,
+    "current": "M-B"
+  },
+  "tier": "B",
+  "role": "Sandstorm setter / bulky attacker (Mega)",
+  "commonMoves": ["Stone Edge", "Crunch", "Ice Punch", "Protect"],
+  "commonItems": ["Tyranitarite"],
+  "summary": "Mega Evolves to set sandstorm, powering up Excadrill and other sand-abusers while hitting hard with Rock/Dark coverage.",
+  "relatedGuideSlugs": ["team-archetypes"]
+}

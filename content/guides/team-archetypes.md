@@ -33,7 +33,7 @@ Pelipper sets rain on entry, which boosts Water-type attacks and gives Hurricane
 
 **Core:** Tyranitar (Mega) + Excadrill
 
-Tyranitar sets sandstorm, which boosts its own Special Defense and synergizes with Excadrill's Sand Rush ability — Excadrill's Speed doubles in sand, turning it from a slow attacker into one of the fastest Pokémon in the format for as long as the weather holds. This archetype rewards timing: knowing when to bring Excadrill in *after* sand is already up.
+[Tyranitar](/pokedex/tyranitar) sets sandstorm, which boosts its own Special Defense and synergizes with [Excadrill](/pokedex/excadrill)'s Sand Rush ability — Excadrill's Speed doubles in sand, turning it from a slow attacker into one of the fastest Pokémon in the format for as long as the weather holds. This archetype rewards timing: knowing when to bring Excadrill in *after* sand is already up.
 
 ## The pattern across all four
 

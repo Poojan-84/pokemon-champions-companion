@@ -9,7 +9,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Local development environment ready (Git, Node.js, GitHub account)
 - Next.js project scaffolded (TypeScript, App Router, Tailwind CSS) + first commit
 - Repo pushed to GitHub, connected to Vercel, live deploy confirmed: https://pokemon-champions-companion.vercel.app
-- Pokémon database: data model + 20 curated Pokémon entries, plus /pokedex index and detail page template (mobile-first, card-based, per VISION.md's 30-second rule)
+- Pokémon database: data model + 22 curated Pokémon entries (Tyranitar and Excadrill added to back the Team Archetypes guide's Sand Offense section), plus /pokedex index and detail page template (mobile-first, card-based, per VISION.md's 30-second rule)
 - Site shell: navigation (NavBar, mobile-first, no hamburger needed yet) + real homepage (per VISION.md, single CTA to /pokedex)
 - Search functionality: client-side instant search in NavBar, case-insensitive partial name match, no backend needed
 - Tier list page: /tier-list groups all Pokémon by tier (S -> D), compact scannable cards, linked from NavBar
