@@ -4,7 +4,7 @@
 - [ ] Team archetype guide(s)
 
 ## Up next
-- [ ] Mobile QA + Core Web Vitals pass
+(nothing queued — Team archetype guide(s) is the last open Phase 1 item)
 
 ## Done
 - [x] Install Git (Windows)
@@ -22,6 +22,7 @@
 - [x] Sitemap + structured data + meta tags pass (sitemap.xml, robots.txt, JSON-LD, canonical URLs, cross-linking, Google Search Console verification)
 - [x] Beginner guide(s) (Markdown guides system + Beginner Overview, linked from homepage)
 - [x] Regulation summary page(s) (/guides/regulation-m-b, cross-linked with Beginner Overview/Tier List/Pokédex)
+- [x] Mobile QA + Core Web Vitals pass (contrast/touch-target/nav-wrapping fixes, all pages 100 on Lighthouse Accessibility)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 

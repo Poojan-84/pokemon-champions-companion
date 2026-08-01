@@ -16,12 +16,13 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - SEO fundamentals: sitemap.xml, robots.txt, JSON-LD structured data, meta tag audit, internal cross-linking, canonical URLs, Google Search Console site verification (see DECISION_LOG.md)
 - Beginner competitive guide: Markdown-based guides system + real Beginner Overview content, linked from homepage and Guides index
 - Regulation summary page: /guides/regulation-m-b covers the current regulation's rules and end date, cross-linked with the Beginner Overview, Tier List, and Pokédex
+- Mobile QA + performance pass: fixed 10 WCAG AA contrast failures and multiple sub-24px touch targets across the site, plus a nav-wrapping bug found along the way; all pages now score 100 on Lighthouse Accessibility (see DECISION_LOG.md)
 
 ### Current 🚧
 - Team archetype guide(s)
 
 ### Next ⏭️
-- Mobile QA pass + performance pass (Core Web Vitals)
+- Team archetype guide(s) is the last open Phase 1 milestone — once it ships, Phase 1 is complete
 
 ## Phase 1 milestones (Foundation)
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -33,7 +34,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 7. [x] Regulation summary page(s)
 8. [ ] Team archetype guide(s)
 9. [x] SEO fundamentals: sitemap, structured data, meta tags, internal linking pass
-10. [ ] Mobile QA pass + performance pass (Core Web Vitals)
+10. [x] Mobile QA pass + performance pass (Core Web Vitals)
 
 ## Phase 2 milestones (Tools) — high level, detailed later
 - Team builder MVP
