@@ -24,3 +24,18 @@ export function getAllPokemon(): PokemonEntry[] {
     .filter((entry): entry is PokemonEntry => entry !== null)
     .sort((a, b) => a.nationalDexNumber - b.nationalDexNumber);
 }
+
+const TIER_ORDER = ["S", "A", "B", "C", "D"];
+
+export interface TierGroup {
+  tier: string;
+  pokemon: PokemonEntry[];
+}
+
+export function getPokemonGroupedByTier(): TierGroup[] {
+  const all = getAllPokemon();
+  return TIER_ORDER.map((tier) => ({
+    tier,
+    pokemon: all.filter((p) => p.tier === tier),
+  })).filter((group) => group.pokemon.length > 0);
+}

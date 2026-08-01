@@ -19,12 +19,20 @@ export function NavBar() {
         <Link href="/" className="text-lg font-bold">
           Champions Companion
         </Link>
-        <Link
-          href="/pokedex"
-          className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
-        >
-          Pokédex
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/pokedex"
+            className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+          >
+            Pokédex
+          </Link>
+          <Link
+            href="/tier-list"
+            className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+          >
+            Tier List
+          </Link>
+        </div>
       </nav>
       <div role="search" className="mx-auto max-w-3xl px-4 pb-3">
         <PokemonSearch pokemon={pokemon} />
