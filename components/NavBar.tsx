@@ -50,6 +50,12 @@ export function NavBar() {
           >
             Type Coverage
           </Link>
+          <Link
+            href="/rental-teams"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-text-secondary hover:text-accent hover:underline"
+          >
+            Rental Teams
+          </Link>
         </div>
       </nav>
       <div role="search" className="mx-auto max-w-3xl px-4 pb-3">

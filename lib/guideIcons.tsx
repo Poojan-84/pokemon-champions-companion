@@ -78,3 +78,13 @@ export function GuideHeadingIcon({ text }: { text: string }) {
   const Icon = HEADING_ICONS[text] ?? Info;
   return <Icon className="guide-heading-icon" size={20} aria-hidden="true" />;
 }
+
+// "Sand Offense" -> "sand-offense" — used as the h2 anchor id so other pages
+// (e.g. the Rental Team Directory's archetype badge) can deep-link into a
+// specific section via /guides/team-archetypes#sand-offense.
+export function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}

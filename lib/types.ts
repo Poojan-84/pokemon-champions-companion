@@ -35,3 +35,13 @@ export interface GuideFrontmatter {
 export interface GuideEntry extends GuideFrontmatter {
   contentHtml: string;
 }
+
+export interface RentalTeamEntry {
+  id: string;
+  name: string;
+  type: "core" | "full-team";
+  pokemonIds: string[];
+  archetype: string | null;
+  summary: string;
+  sourceNote: string;
+}

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getAllGuideSlugs, getGuideBySlug } from "@/lib/guides";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
-import { splitGuideHtml, GuideHeadingIcon } from "@/lib/guideIcons";
+import { splitGuideHtml, GuideHeadingIcon, slugifyHeading } from "@/lib/guideIcons";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -57,7 +57,7 @@ export default async function GuidePage({ params }: PageProps) {
       <div className="prose prose-invert mt-4 max-w-none">
         {blocks.map((block, index) =>
           block.type === "heading" ? (
-            <h2 key={index} className="guide-heading">
+            <h2 key={index} id={slugifyHeading(block.headingText)} className="guide-heading">
               <GuideHeadingIcon text={block.headingText} />
               <span>{block.headingText}</span>
             </h2>

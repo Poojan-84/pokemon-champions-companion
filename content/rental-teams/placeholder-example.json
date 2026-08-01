@@ -1,0 +1,9 @@
+{
+  "id": "placeholder-example",
+  "name": "PLACEHOLDER — replace with real curated data",
+  "type": "core",
+  "pokemonIds": ["garchomp", "kingambit"],
+  "archetype": null,
+  "summary": "Placeholder content — do not treat as real competitive guidance.",
+  "sourceNote": "PLACEHOLDER"
+}

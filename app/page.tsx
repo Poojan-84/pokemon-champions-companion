@@ -38,9 +38,14 @@ const LIVE_FEATURES = [
     href: "/type-coverage",
     description: "See what your moves hit hard, and what they miss.",
   },
+  {
+    title: "Rental Teams",
+    href: "/rental-teams",
+    description: "Curated cores and full teams from real tournament play.",
+  },
 ];
 
-const COMING_SOON_FEATURES = ["Rental Team Directory", "Matchup Pages", "Speed Calculator"];
+const COMING_SOON_FEATURES = ["Matchup Pages", "Speed Calculator"];
 
 export default function Home() {
   return (
