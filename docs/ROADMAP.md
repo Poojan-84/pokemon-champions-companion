@@ -10,12 +10,13 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Next.js project scaffolded (TypeScript, App Router, Tailwind CSS) + first commit
 - Repo pushed to GitHub, connected to Vercel, live deploy confirmed: https://pokemon-champions-companion.vercel.app
 - Pokémon database: data model + 20 curated Pokémon entries, plus /pokedex index and detail page template (mobile-first, card-based, per VISION.md's 30-second rule)
+- Site shell: navigation (NavBar, mobile-first, no hamburger needed yet) + real homepage (per VISION.md, single CTA to /pokedex)
 
 ### Current 🚧
 - Search functionality
 
 ### Next ⏭️
-- Site shell: navigation, homepage, mobile-first layout
+- Tier list page(s)
 
 ## Phase 1 milestones (Foundation)
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)

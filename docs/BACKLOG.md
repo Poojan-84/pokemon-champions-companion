@@ -4,7 +4,7 @@
 - [ ] Build search functionality
 
 ## Up next
-- [ ] Build homepage shell + navigation
+- [ ] Tier list page
 
 ## Done
 - [x] Install Git (Windows)
@@ -16,9 +16,9 @@
 - [x] Design Pokémon data model (content/pokemon/schema.md)
 - [x] Source/decide on data pipeline for Pokémon Champions stats (PokeAPI + scripts/fetch-pokemon.ts, hand-curated competitive fields)
 - [x] Pokémon database pages (/pokedex index + /pokedex/[id] detail template, 20 entries)
+- [x] Build homepage shell + navigation (NavBar site-wide, real homepage per VISION.md)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
-- [ ] Tier list page
 - [ ] Beginner guide(s)
 - [ ] Regulation summary page(s)
 - [ ] Team archetype guide(s)
