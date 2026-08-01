@@ -19,7 +19,7 @@
 - [x] Build homepage shell + navigation (NavBar site-wide, real homepage per VISION.md)
 - [x] Build search functionality (client-side instant search in NavBar)
 - [x] Tier list page (/tier-list, grouped by tier, linked from NavBar)
-- [x] Sitemap + structured data + meta tags pass (sitemap.xml, robots.txt, JSON-LD, canonical URLs, cross-linking)
+- [x] Sitemap + structured data + meta tags pass (sitemap.xml, robots.txt, JSON-LD, canonical URLs, cross-linking, Google Search Console verification)
 - [x] Beginner guide(s) (Markdown guides system + Beginner Overview, linked from homepage)
 - [x] Regulation summary page(s) (/guides/regulation-m-b, cross-linked with Beginner Overview/Tier List/Pokédex)
 

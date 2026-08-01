@@ -13,7 +13,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Site shell: navigation (NavBar, mobile-first, no hamburger needed yet) + real homepage (per VISION.md, single CTA to /pokedex)
 - Search functionality: client-side instant search in NavBar, case-insensitive partial name match, no backend needed
 - Tier list page: /tier-list groups all Pokémon by tier (S -> D), compact scannable cards, linked from NavBar
-- SEO fundamentals: sitemap.xml, robots.txt, JSON-LD structured data, meta tag audit, internal cross-linking, canonical URLs (see DECISION_LOG.md)
+- SEO fundamentals: sitemap.xml, robots.txt, JSON-LD structured data, meta tag audit, internal cross-linking, canonical URLs, Google Search Console site verification (see DECISION_LOG.md)
 - Beginner competitive guide: Markdown-based guides system + real Beginner Overview content, linked from homepage and Guides index
 - Regulation summary page: /guides/regulation-m-b covers the current regulation's rules and end date, cross-linked with the Beginner Overview, Tier List, and Pokédex
 
