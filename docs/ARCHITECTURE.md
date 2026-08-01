@@ -7,6 +7,7 @@
 | Framework | **Next.js** (React, App Router, TypeScript) | Best-in-class SEO via server-side rendering & static generation; huge community; AI tools (including me) understand it deeply; scales from a static site to a full app without a rewrite |
 | Styling | **Tailwind CSS** | Fast to build with, keeps design consistent, no context-switching between files, easy for AI-assisted development |
 | Content (Phase 1) | **Markdown/JSON files in the repo** | No database needed yet. Pokémon data, guides, and tier lists are content — versioned in Git, editable like text, zero hosting cost, trivially fast to serve |
+| Markdown parsing | **gray-matter** (frontmatter) + **marked** (Markdown → HTML) | Two small, focused, well-maintained libraries instead of the heavier remark/unified plugin pipeline — we only need frontmatter extraction and simple HTML rendering, not a full transform ecosystem. Styled with Tailwind's official `@tailwindcss/typography` plugin (`prose` classes) rather than hand-rolled CSS |
 | Hosting | **Vercel** | Built by the Next.js team, zero-config deploys from GitHub, free tier is enough for a long time, automatic previews per pull request |
 | Database (Phase 3+) | **Postgres via Supabase** (deferred) | Only needed once we have user accounts/saved teams. Don't introduce this before it's needed. |
 | Domain/DNS | TBD when we register a domain | Will document once purchased |

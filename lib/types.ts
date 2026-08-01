@@ -23,3 +23,15 @@ export interface PokemonEntry {
   summary: string;
   relatedGuideSlugs: string[];
 }
+
+export interface GuideFrontmatter {
+  title: string;
+  description: string;
+  slug: string;
+  publishedDate: string;
+  updatedDate?: string;
+}
+
+export interface GuideEntry extends GuideFrontmatter {
+  contentHtml: string;
+}

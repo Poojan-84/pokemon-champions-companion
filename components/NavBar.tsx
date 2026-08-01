@@ -32,6 +32,12 @@ export function NavBar() {
           >
             Tier List
           </Link>
+          <Link
+            href="/guides"
+            className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+          >
+            Guides
+          </Link>
         </div>
       </nav>
       <div role="search" className="mx-auto max-w-3xl px-4 pb-3">
