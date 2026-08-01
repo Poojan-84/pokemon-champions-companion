@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function TierListPage() {
   const tierGroups = getPokemonGroupedByTier();
+  const totalCount = tierGroups.reduce((sum, group) => sum + group.pokemon.length, 0);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -42,10 +43,7 @@ export default function TierListPage() {
     <main className="mx-auto max-w-3xl px-4 py-8">
       <JsonLd data={jsonLd} />
       <h1 className="text-2xl font-bold">Tier List</h1>
-      <p className="mt-2 text-text-secondary">
-        A tier list ranks Pokémon from strongest (S) to weakest, based on how much they help you
-        win right now — start with S and A tier if you&apos;re building your first team.
-      </p>
+      <p className="mt-2 text-text-secondary">Current meta — {totalCount} strongest Pokémon individually</p>
       <p className="mt-2 text-sm text-text-secondary">
         Want full details on a Pokémon? Browse the{" "}
         <Link
