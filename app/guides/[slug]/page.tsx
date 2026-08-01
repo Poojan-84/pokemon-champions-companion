@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getAllGuideSlugs, getGuideBySlug } from "@/lib/guides";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { splitGuideHtml, GuideHeadingIcon } from "@/lib/guideIcons";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -33,6 +34,7 @@ export default async function GuidePage({ params }: PageProps) {
     notFound();
   }
 
+  const blocks = splitGuideHtml(guide.contentHtml);
   const pageUrl = `${SITE_URL}/guides/${guide.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -48,17 +50,22 @@ export default async function GuidePage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-2xl px-4 py-8">
       <JsonLd data={jsonLd} />
-      <Link
-        href="/guides"
-        className="inline-block py-2 text-sm text-gray-500 hover:underline dark:text-gray-400"
-      >
+      <Link href="/guides" className="inline-block py-2 text-sm text-accent hover:underline">
         ← Guides
       </Link>
       <h1 className="mt-3 text-2xl font-bold">{guide.title}</h1>
-      <div
-        className="prose prose-gray mt-4 max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: guide.contentHtml }}
-      />
+      <div className="prose prose-invert mt-4 max-w-none">
+        {blocks.map((block, index) =>
+          block.type === "heading" ? (
+            <h2 key={index} className="guide-heading">
+              <GuideHeadingIcon text={block.headingText} />
+              <span>{block.headingText}</span>
+            </h2>
+          ) : (
+            <div key={index} dangerouslySetInnerHTML={{ __html: block.html }} />
+          ),
+        )}
+      </div>
     </main>
   );
 }

@@ -17,22 +17,22 @@ export default function Home() {
       <h1 className="text-3xl font-bold sm:text-4xl">
         Find what&apos;s good in Pokémon Champions — fast.
       </h1>
-      <p className="mt-4 max-w-md text-gray-600 dark:text-gray-400">
+      <p className="mt-4 max-w-md text-text-secondary">
         A companion site for casual and new competitive Pokémon Champions
         players — clear answers on what to use and why, without wading
         through raw stats.
       </p>
       <Link
         href="/pokedex"
-        className="mt-8 inline-flex items-center justify-center rounded-full bg-indigo-600 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-indigo-700"
+        className="mt-8 inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-bg-page transition-colors hover:bg-accent/90"
       >
         Browse the Pokédex
       </Link>
-      <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+      <p className="mt-4 text-sm text-text-secondary">
         New here?{" "}
         <Link
           href="/guides/beginner-overview"
-          className="inline-block py-2 underline hover:no-underline"
+          className="inline-block py-2 text-accent underline hover:no-underline"
         >
           Start with our Beginner Overview
         </Link>

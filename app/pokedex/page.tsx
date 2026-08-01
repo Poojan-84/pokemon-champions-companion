@@ -32,9 +32,12 @@ export default function PokedexPage() {
     <main className="mx-auto max-w-3xl px-4 py-8">
       <JsonLd data={jsonLd} />
       <h1 className="mb-2 text-2xl font-bold">Pokédex</h1>
-      <p className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+      <p className="mb-6 text-sm text-text-secondary">
         Want a quick ranking instead? Check the{" "}
-        <Link href="/tier-list" className="inline-block py-2 underline hover:no-underline">
+        <Link
+          href="/tier-list"
+          className="inline-block py-2 text-accent underline hover:no-underline"
+        >
           Tier List
         </Link>
         .

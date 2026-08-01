@@ -1,27 +1,78 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* "Neon Competitive" visual identity — a single fixed dark theme, not a
+   light/dark toggle. See docs/DECISION_LOG.md for full reasoning. */
+@theme {
+  --color-bg-page: #0a0c10;
+  --color-bg-surface: #10151c;
+  /* Spec'd as #1e3a4a, but that only reaches ~1.6:1 against our backgrounds
+     — fails WCAG 1.4.11 non-text contrast (3:1 min) and borders would be
+     nearly invisible, undermining the whole point of a "visible bordered
+     surface." Lightened on the same hue to clear 3:1 with margin. See
+     DECISION_LOG.md. */
+  --color-border-default: #527b93;
+  --color-accent: #5fc9e8;
+  --color-text-primary: #eaf7fc;
+  /* Spec'd as #4a6b7a, but that only reaches ~3.4:1 on our dark backgrounds
+     (fails WCAG AA's 4.5:1 for normal text — confirmed via the same
+     contrast check used in the mobile/perf QA pass). Lightened to the
+     nearest value on the same hue that clears 4.5:1 on both bg-page and
+     bg-surface with a safety margin. See DECISION_LOG.md. */
+  --color-text-secondary: #6d93a6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Guide body content: raw HTML from marked, styled via the typography
+   plugin's documented CSS-variable overrides rather than fighting its
+   selectors. Always dark (prose-invert), since the site has no light mode. */
+.prose {
+  --tw-prose-invert-body: var(--color-text-primary);
+  --tw-prose-invert-headings: var(--color-text-primary);
+  --tw-prose-invert-links: var(--color-accent);
+  --tw-prose-invert-bold: var(--color-text-primary);
+  --tw-prose-invert-counters: var(--color-text-secondary);
+  --tw-prose-invert-bullets: var(--color-border-default);
+  --tw-prose-invert-hr: var(--color-border-default);
+  --tw-prose-invert-quotes: var(--color-text-primary);
+  --tw-prose-invert-quote-borders: var(--color-accent);
+  --tw-prose-invert-captions: var(--color-text-secondary);
+  --tw-prose-invert-code: var(--color-text-primary);
+  --tw-prose-invert-th-borders: var(--color-border-default);
+  --tw-prose-invert-td-borders: var(--color-border-default);
+}
+
+/* Callout/highlight box for the 1-2 most important sentences in a guide.
+   Embedded as raw HTML directly in guide Markdown (content/guides/*.md),
+   since marked has no concept of custom components. */
+.callout {
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--color-accent);
+  background-color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  border-radius: 0 6px 6px 0;
+  padding: 0.875rem 1.125rem;
+}
+.callout p {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+/* Section heading + icon, injected server-side (see lib/guideIcons.tsx)
+   after marked renders the guide body. */
+.guide-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.guide-heading-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
 }

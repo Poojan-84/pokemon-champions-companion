@@ -11,7 +11,7 @@ export function NavBar() {
   }));
 
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800">
+    <header className="border-b border-border-default bg-bg-surface">
       <nav
         aria-label="Main"
         className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-y-1 px-4 py-1"
@@ -22,19 +22,19 @@ export function NavBar() {
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
           <Link
             href="/pokedex"
-            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-text-secondary hover:text-accent hover:underline"
           >
             Pokédex
           </Link>
           <Link
             href="/tier-list"
-            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-text-secondary hover:text-accent hover:underline"
           >
             Tier List
           </Link>
           <Link
             href="/guides"
-            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-text-secondary hover:text-accent hover:underline"
           >
             Guides
           </Link>

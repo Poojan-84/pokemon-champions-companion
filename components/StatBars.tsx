@@ -21,18 +21,13 @@ export function StatBars({ stats }: { stats: BaseStats }) {
         const percent = Math.min(100, (value / MAX_STAT) * 100);
         return (
           <div key={key} className="flex items-center gap-2">
-            <span className="w-24 shrink-0 text-xs text-gray-600 dark:text-gray-400">
-              {label}
-            </span>
+            <span className="w-24 shrink-0 text-xs text-text-secondary">{label}</span>
             <div
-              className="h-2.5 flex-1 rounded-full bg-gray-100 dark:bg-gray-800"
+              className="h-2.5 flex-1 rounded-full bg-border-default"
               role="img"
               aria-label={`${label}: ${value} out of ${MAX_STAT}`}
             >
-              <div
-                className="h-2.5 rounded-full bg-indigo-500"
-                style={{ width: `${percent}%` }}
-              />
+              <div className="h-2.5 rounded-full bg-accent" style={{ width: `${percent}%` }} />
             </div>
             <span className="w-8 shrink-0 text-right text-xs font-medium">{value}</span>
           </div>

@@ -70,7 +70,7 @@ export default async function PokemonDetailPage({ params }: PageProps) {
       <JsonLd data={jsonLd} />
       <Link
         href="/pokedex"
-        className="inline-block py-2 text-sm text-gray-500 hover:underline dark:text-gray-400"
+        className="inline-block py-2 text-sm text-accent hover:underline"
       >
         ← Pokédex
       </Link>
@@ -97,11 +97,13 @@ export default async function PokemonDetailPage({ params }: PageProps) {
 
       <div className="mt-4">
         <p className="font-medium">{pokemon.role}</p>
-        <p className="mt-1 text-gray-700 dark:text-gray-300">{pokemon.summary}</p>
+        <p className="mt-1 text-text-secondary">{pokemon.summary}</p>
       </div>
 
-      <details className="mt-6 rounded-lg border border-gray-200 p-4 dark:border-gray-700">
-        <summary className="cursor-pointer font-semibold">Full details</summary>
+      <details className="mt-6 rounded-md border border-border-default border-t-2 border-t-accent bg-bg-surface p-4">
+        <summary className="cursor-pointer font-semibold text-accent marker:text-accent">
+          Full details
+        </summary>
 
         <div className="mt-4 space-y-6">
           <section>

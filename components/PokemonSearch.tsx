@@ -51,31 +51,29 @@ export function PokemonSearch({ pokemon }: { pokemon: SearchablePokemon[] }) {
         }}
         placeholder="Search Pokémon…"
         aria-label="Search Pokémon"
-        className="w-full rounded-md border border-gray-300 bg-white px-3 py-3 text-sm text-gray-900 focus:border-gray-500 focus:outline-none dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+        className="w-full rounded-md border border-border-default bg-bg-page px-3 py-3 text-sm text-text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
       />
 
       {showDropdown ? (
-        <ul className="absolute z-10 mt-1 max-h-80 w-full overflow-y-auto rounded-md border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-900">
+        <ul className="absolute z-10 mt-1 max-h-80 w-full overflow-y-auto rounded-md border border-border-default bg-bg-surface shadow-lg">
           {results.length > 0 ? (
             results.map((p) => (
               <li key={p.id}>
                 <Link
                   href={`/pokedex/${p.id}`}
                   onClick={closeAndClear}
-                  className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-accent/10"
                 >
                   {p.spriteUrl ? (
                     <Image src={p.spriteUrl} alt="" width={28} height={28} />
                   ) : null}
-                  <span className="flex-1 truncate">{p.name}</span>
+                  <span className="flex-1 truncate text-text-primary">{p.name}</span>
                   <TierBadge tier={p.tier} />
                 </Link>
               </li>
             ))
           ) : (
-            <li className="px-3 py-2 text-sm text-gray-500 dark:text-gray-400">
-              No Pokémon found
-            </li>
+            <li className="px-3 py-2 text-sm text-text-secondary">No Pokémon found</li>
           )}
         </ul>
       ) : null}

@@ -37,6 +37,10 @@ Tyranitar sets sandstorm, which boosts its own Special Defense and synergizes wi
 
 ## The pattern across all four
 
-Notice something: three of these four archetypes are built around **weather** (sun, rain, sand). That's a real, current feature of the Regulation M-B meta, not a coincidence — weather-setting Pokémon are strong right now, so teams built around exploiting weather are common. If you're building your first team, picking one weather archetype and building around it is a genuinely solid, low-complexity starting point.
+<div class="callout">
+<p><strong>Notice something: three of these four archetypes are built around weather</strong> (sun, rain, sand). That's a real, current feature of the Regulation M-B meta, not a coincidence.</p>
+</div>
+
+Weather-setting Pokémon are strong right now, so teams built around exploiting weather are common. If you're building your first team, picking one weather archetype and building around it is a genuinely solid, low-complexity starting point.
 
 Ready to try one? Browse the [Tier List](/tier-list) or look up any Pokémon mentioned here in the [Pokédex](/pokedex) to see its full details.

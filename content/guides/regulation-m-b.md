@@ -13,7 +13,11 @@ If you read our [Beginner Overview](/guides/beginner-overview), you already know
 
 Regulation M-B runs from **June 17 to September 2, 2026**.
 
-The headline news for M-B: **there are no banned Pokémon this season.** If a Pokémon exists in the current Champions roster, you can use it — Mega Evolutions included. That's unusually open compared to past regulations in other Pokémon games, where a handful of the strongest Pokémon are often restricted.
+<div class="callout">
+<p><strong>The headline news for M-B: there are no banned Pokémon this season.</strong> If a Pokémon exists in the current Champions roster, you can use it — Mega Evolutions included.</p>
+</div>
+
+That's unusually open compared to past regulations in other Pokémon games, where a handful of the strongest Pokémon are often restricted.
 
 M-B also introduced **22 new Pokémon and 16 new Mega Evolutions** compared to the previous regulation, which is part of why the [Tier List](/tier-list) looks the way it does right now — a lot of new options entered the format at once.
 

@@ -10,7 +10,7 @@ export function TierListCard({
   return (
     <Link
       href={`/pokedex/${pokemon.id}`}
-      className="flex w-20 flex-col items-center gap-1 rounded-md border border-gray-200 p-2 text-center transition-colors hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500"
+      className="flex w-20 flex-col items-center gap-1 rounded-md border border-border-default bg-bg-surface p-2 text-center transition-colors hover:border-accent"
     >
       {pokemon.spriteUrl ? (
         <Image

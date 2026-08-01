@@ -37,4 +37,8 @@ A good way to start: browse the Tier List, click into two or three Pokémon that
 
 ## One last thing
 
-You don't need to understand everything on this site right away. Competitive Pokémon has a lot of depth, but you can win real matches with basic knowledge and a decent team. Everything else — matchups, speed calculations, advanced strategy — comes naturally the more you play. Start simple.
+<div class="callout">
+<p><strong>You don't need to understand everything on this site right away.</strong> Competitive Pokémon has a lot of depth, but you can win real matches with basic knowledge and a decent team.</p>
+</div>
+
+Everything else — matchups, speed calculations, advanced strategy — comes naturally the more you play. Start simple.

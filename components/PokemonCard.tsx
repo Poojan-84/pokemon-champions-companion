@@ -7,7 +7,7 @@ export function PokemonCard({ pokemon }: { pokemon: PokemonEntry }) {
   return (
     <Link
       href={`/pokedex/${pokemon.id}`}
-      className="flex items-center gap-3 rounded-lg border border-gray-200 p-3 transition-colors hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500"
+      className="flex items-center gap-3 rounded-md border border-border-default bg-bg-surface p-3 transition-colors hover:border-accent"
     >
       {pokemon.spriteUrl ? (
         <Image
@@ -23,9 +23,7 @@ export function PokemonCard({ pokemon }: { pokemon: PokemonEntry }) {
           <span className="truncate font-semibold">{pokemon.name}</span>
           <TierBadge tier={pokemon.tier} />
         </div>
-        <p className="truncate text-sm text-gray-600 dark:text-gray-400">
-          {pokemon.summary}
-        </p>
+        <p className="truncate text-sm text-text-secondary">{pokemon.summary}</p>
       </div>
     </Link>
   );

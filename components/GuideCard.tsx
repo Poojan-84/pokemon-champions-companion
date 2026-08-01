@@ -5,10 +5,10 @@ export function GuideCard({ guide }: { guide: Pick<GuideEntry, "slug" | "title" 
   return (
     <Link
       href={`/guides/${guide.slug}`}
-      className="block rounded-lg border border-gray-200 p-3 transition-colors hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500"
+      className="block rounded-md border border-border-default bg-bg-surface p-3 transition-colors hover:border-accent"
     >
       <span className="font-semibold">{guide.title}</span>
-      <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{guide.description}</p>
+      <p className="mt-1 text-sm text-text-secondary">{guide.description}</p>
     </Link>
   );
 }
