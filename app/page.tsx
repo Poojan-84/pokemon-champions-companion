@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FeatureCard } from "@/components/FeatureCard";
 
 // No `title` here on purpose: the root layout's `title.default` already
 // matches the desired homepage title exactly. If this page set its own
@@ -11,9 +12,35 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+const LIVE_FEATURES = [
+  {
+    title: "Pokédex",
+    href: "/pokedex",
+    description: "Look up any Pokémon's stats, moves, and tier.",
+  },
+  {
+    title: "Tier List",
+    href: "/tier-list",
+    description: "See what's strongest right now, at a glance.",
+  },
+  {
+    title: "Guides",
+    href: "/guides",
+    description: "Beginner-friendly guides to the current meta.",
+  },
+];
+
+const COMING_SOON_FEATURES = [
+  "Team Builder",
+  "Rental Team Directory",
+  "Matchup Pages",
+  "Type Coverage Checker",
+  "Speed Calculator",
+];
+
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-4 py-16 text-center">
+    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center px-4 py-16 text-center">
       <h1 className="text-3xl font-bold sm:text-4xl">
         Find what&apos;s good in Pokémon Champions — fast.
       </h1>
@@ -22,13 +49,17 @@ export default function Home() {
         players — clear answers on what to use and why, without wading
         through raw stats.
       </p>
-      <Link
-        href="/pokedex"
-        className="mt-8 inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-bg-page transition-colors hover:bg-accent/90"
-      >
-        Browse the Pokédex
-      </Link>
-      <p className="mt-4 text-sm text-text-secondary">
+
+      <div className="mt-8 grid w-full grid-cols-1 gap-3 text-left sm:grid-cols-2 md:grid-cols-3">
+        {LIVE_FEATURES.map((feature) => (
+          <FeatureCard key={feature.title} {...feature} />
+        ))}
+        {COMING_SOON_FEATURES.map((title) => (
+          <FeatureCard key={title} title={title} />
+        ))}
+      </div>
+
+      <p className="mt-6 text-sm text-text-secondary">
         New here?{" "}
         <Link
           href="/guides/beginner-overview"

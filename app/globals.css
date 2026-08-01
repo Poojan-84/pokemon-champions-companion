@@ -1,24 +1,29 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* "Neon Competitive" visual identity — a single fixed dark theme, not a
-   light/dark toggle. See docs/DECISION_LOG.md for full reasoning. */
+/* "Neon Competitive" visual identity ("deeper" palette revision) — a single
+   fixed dark theme, not a light/dark toggle. See docs/DECISION_LOG.md for
+   full reasoning. All six tokens re-verified with the same canvas-based
+   contrast check used throughout this project's visual passes:
+     text-primary/bg-page      18.46:1  (need 4.5:1)
+     text-primary/bg-surface   17.35:1  (need 4.5:1)
+     text-secondary/bg-page     6.12:1  (need 4.5:1)
+     text-secondary/bg-surface  5.76:1  (need 4.5:1)
+     accent/bg-page             12.61:1 (need 4.5:1)
+     accent/bg-surface          11.85:1 (need 4.5:1)
+     border-default/bg-page      4.44:1 (need 3:1, non-text)
+     border-default/bg-surface   4.17:1 (need 3:1, non-text)
+   Unlike the previous palette revision (where two spec'd values needed
+   adjusting — see git history), all four newly-given values here
+   (bg-page, bg-surface, border-default, accent) passed as specified with no
+   changes needed. text-primary/text-secondary are carried over unchanged
+   from the prior revision's already-corrected values. */
 @theme {
-  --color-bg-page: #0a0c10;
-  --color-bg-surface: #10151c;
-  /* Spec'd as #1e3a4a, but that only reaches ~1.6:1 against our backgrounds
-     — fails WCAG 1.4.11 non-text contrast (3:1 min) and borders would be
-     nearly invisible, undermining the whole point of a "visible bordered
-     surface." Lightened on the same hue to clear 3:1 with margin. See
-     DECISION_LOG.md. */
-  --color-border-default: #527b93;
-  --color-accent: #5fc9e8;
+  --color-bg-page: #050709;
+  --color-bg-surface: #0c1116;
+  --color-border-default: #0e7fa8;
+  --color-accent: #0ee0ff;
   --color-text-primary: #eaf7fc;
-  /* Spec'd as #4a6b7a, but that only reaches ~3.4:1 on our dark backgrounds
-     (fails WCAG AA's 4.5:1 for normal text — confirmed via the same
-     contrast check used in the mobile/perf QA pass). Lightened to the
-     nearest value on the same hue that clears 4.5:1 on both bg-page and
-     bg-surface with a safety margin. See DECISION_LOG.md. */
   --color-text-secondary: #6d93a6;
 
   --font-sans: var(--font-geist-sans);

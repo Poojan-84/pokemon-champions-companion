@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Star } from "lucide-react";
 import { notFound } from "next/navigation";
 import { getAllPokemonIds, getPokemonById } from "@/lib/pokemon";
 import { TierBadge } from "@/components/TierBadge";
@@ -9,6 +10,8 @@ import { StatBars } from "@/components/StatBars";
 import { Tag } from "@/components/Tag";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { getMoveIcon } from "@/lib/moveIcons";
+import { ITEM_ICONS } from "@/lib/itemIcons";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -118,7 +121,9 @@ export default async function PokemonDetailPage({ params }: PageProps) {
             <ul className="mt-2 flex flex-wrap gap-2">
               {pokemon.abilities.map((ability) => (
                 <li key={ability}>
-                  <Tag>{ability}</Tag>
+                  <Tag icon={<Star className="text-accent" size={14} aria-hidden="true" />}>
+                    {ability}
+                  </Tag>
                 </li>
               ))}
             </ul>
@@ -127,22 +132,38 @@ export default async function PokemonDetailPage({ params }: PageProps) {
           <section>
             <h2 className="font-semibold">Common moves</h2>
             <ul className="mt-2 flex flex-wrap gap-2">
-              {pokemon.commonMoves.map((move) => (
-                <li key={move}>
-                  <Tag>{move}</Tag>
-                </li>
-              ))}
+              {pokemon.commonMoves.map((move) => {
+                const { Icon, colorClass } = getMoveIcon(move);
+                return (
+                  <li key={move}>
+                    <Tag icon={<Icon className={colorClass} size={14} aria-hidden="true" />}>
+                      {move}
+                    </Tag>
+                  </li>
+                );
+              })}
             </ul>
           </section>
 
           <section>
             <h2 className="font-semibold">Common items</h2>
             <ul className="mt-2 flex flex-wrap gap-2">
-              {pokemon.commonItems.map((item) => (
-                <li key={item}>
-                  <Tag>{item}</Tag>
-                </li>
-              ))}
+              {pokemon.commonItems.map((item) => {
+                const ItemIcon = ITEM_ICONS[item];
+                return (
+                  <li key={item}>
+                    <Tag
+                      icon={
+                        ItemIcon ? (
+                          <ItemIcon className="text-accent" size={14} aria-hidden="true" />
+                        ) : undefined
+                      }
+                    >
+                      {item}
+                    </Tag>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>

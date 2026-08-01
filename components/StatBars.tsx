@@ -1,4 +1,5 @@
 import type { BaseStats } from "@/lib/types";
+import { getStatGradientColor } from "@/lib/statGradient";
 
 const STAT_LABELS: { key: keyof BaseStats; label: string }[] = [
   { key: "hp", label: "HP" },
@@ -27,7 +28,10 @@ export function StatBars({ stats }: { stats: BaseStats }) {
               role="img"
               aria-label={`${label}: ${value} out of ${MAX_STAT}`}
             >
-              <div className="h-2.5 rounded-full bg-accent" style={{ width: `${percent}%` }} />
+              <div
+                className="h-2.5 rounded-full"
+                style={{ width: `${percent}%`, backgroundColor: getStatGradientColor(percent) }}
+              />
             </div>
             <span className="w-8 shrink-0 text-right text-xs font-medium">{value}</span>
           </div>
