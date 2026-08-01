@@ -48,7 +48,10 @@ export default async function GuidePage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-2xl px-4 py-8">
       <JsonLd data={jsonLd} />
-      <Link href="/guides" className="text-sm text-gray-500 hover:underline dark:text-gray-400">
+      <Link
+        href="/guides"
+        className="inline-block py-2 text-sm text-gray-500 hover:underline dark:text-gray-400"
+      >
         ← Guides
       </Link>
       <h1 className="mt-3 text-2xl font-bold">{guide.title}</h1>

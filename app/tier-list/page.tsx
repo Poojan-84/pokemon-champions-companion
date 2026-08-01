@@ -48,7 +48,7 @@ export default function TierListPage() {
       </p>
       <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
         Want full details on a Pokémon? Browse the{" "}
-        <Link href="/pokedex" className="underline hover:no-underline">
+        <Link href="/pokedex" className="inline-block py-2 underline hover:no-underline">
           Pokédex
         </Link>
         .

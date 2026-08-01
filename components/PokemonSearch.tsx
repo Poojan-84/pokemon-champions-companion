@@ -51,7 +51,7 @@ export function PokemonSearch({ pokemon }: { pokemon: SearchablePokemon[] }) {
         }}
         placeholder="Search Pokémon…"
         aria-label="Search Pokémon"
-        className="w-full rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-900 focus:border-gray-500 focus:outline-none dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+        className="w-full rounded-md border border-gray-300 bg-white px-3 py-3 text-sm text-gray-900 focus:border-gray-500 focus:outline-none dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
       />
 
       {showDropdown ? (

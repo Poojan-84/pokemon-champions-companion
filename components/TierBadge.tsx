@@ -1,10 +1,12 @@
 import Link from "next/link";
 
+// Every combination here must pass WCAG AA contrast (4.5:1) for normal text —
+// verified with a canvas-based contrast check against the live rendered colors.
 const TIER_STYLES: Record<string, string> = {
   S: "bg-rose-600 text-white",
-  A: "bg-orange-500 text-white",
-  B: "bg-sky-600 text-white",
-  C: "bg-emerald-600 text-white",
+  A: "bg-orange-500 text-gray-900",
+  B: "bg-sky-700 text-white",
+  C: "bg-emerald-600 text-gray-900",
   D: "bg-slate-500 text-white",
 };
 

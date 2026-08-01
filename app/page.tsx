@@ -30,7 +30,10 @@ export default function Home() {
       </Link>
       <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
         New here?{" "}
-        <Link href="/guides/beginner-overview" className="underline hover:no-underline">
+        <Link
+          href="/guides/beginner-overview"
+          className="inline-block py-2 underline hover:no-underline"
+        >
           Start with our Beginner Overview
         </Link>
         .

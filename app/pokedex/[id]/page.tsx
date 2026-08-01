@@ -70,7 +70,7 @@ export default async function PokemonDetailPage({ params }: PageProps) {
       <JsonLd data={jsonLd} />
       <Link
         href="/pokedex"
-        className="text-sm text-gray-500 hover:underline dark:text-gray-400"
+        className="inline-block py-2 text-sm text-gray-500 hover:underline dark:text-gray-400"
       >
         ← Pokédex
       </Link>

@@ -14,27 +14,27 @@ export function NavBar() {
     <header className="border-b border-gray-200 dark:border-gray-800">
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3"
+        className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-y-1 px-4 py-1"
       >
-        <Link href="/" className="text-lg font-bold">
+        <Link href="/" className="inline-flex items-center py-2.5 text-lg font-bold">
           Champions Companion
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
           <Link
             href="/pokedex"
-            className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
           >
             Pokédex
           </Link>
           <Link
             href="/tier-list"
-            className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
           >
             Tier List
           </Link>
           <Link
             href="/guides"
-            className="text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300"
           >
             Guides
           </Link>
