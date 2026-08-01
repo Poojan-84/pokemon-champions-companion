@@ -33,14 +33,14 @@ const LIVE_FEATURES = [
     href: "/team-builder",
     description: "Build a team and check rules + type coverage.",
   },
+  {
+    title: "Type Coverage",
+    href: "/type-coverage",
+    description: "See what your moves hit hard, and what they miss.",
+  },
 ];
 
-const COMING_SOON_FEATURES = [
-  "Rental Team Directory",
-  "Matchup Pages",
-  "Type Coverage Checker",
-  "Speed Calculator",
-];
+const COMING_SOON_FEATURES = ["Rental Team Directory", "Matchup Pages", "Speed Calculator"];
 
 export default function Home() {
   return (

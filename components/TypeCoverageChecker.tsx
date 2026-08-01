@@ -1,32 +1,30 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 import type { PokemonEntry } from "@/lib/types";
 import { TierBadge } from "./TierBadge";
 import { TypeBadge } from "./TypeBadge";
 import { Tag } from "./Tag";
-import { validateTeam, type TeamMember } from "@/lib/teamValidation";
-import { computeTeamTypeCoverage } from "@/lib/teamTypeCoverage";
-import { getMoveIcon } from "@/lib/moveIcons";
+import { getMoveIcon, getMoveType } from "@/lib/moveIcons";
+import { computeOffensiveTypeCoverage } from "@/lib/offensiveTypeCoverage";
+import type { PokemonType } from "@/lib/typeChart";
 
-const TEAM_SIZE = 6;
-const STORAGE_KEY = "team-builder:current-team";
+const MAX_SELECTED = 6;
 
-type Team = (TeamMember | null)[];
+type Slots = (string | null)[]; // Pokémon id per slot, or null if empty
 
-function emptyTeam(): Team {
-  return Array(TEAM_SIZE).fill(null);
+function emptySlots(): Slots {
+  return Array(MAX_SELECTED).fill(null);
 }
 
-function capitalize(value: string): string {
-  return value.charAt(0).toUpperCase() + value.slice(1);
-}
-
-export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
-  const [team, setTeam] = useState<Team>(emptyTeam());
-  const [loaded, setLoaded] = useState(false);
+// Standalone utility, not tied to Team Builder's saved team — no
+// localStorage persistence and no Regulation M-B rule checks (species
+// clause, item limits) apply here, since this tool is purely about
+// offensive move-type coverage, not building a legal team.
+export function TypeCoverageChecker({ pokemon }: { pokemon: PokemonEntry[] }) {
+  const [slots, setSlots] = useState<Slots>(emptySlots());
   const [activeSlot, setActiveSlot] = useState<number | null>(null);
   const [query, setQuery] = useState("");
 
@@ -35,47 +33,6 @@ export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
     for (const p of pokemon) map[p.id] = p;
     return map;
   }, [pokemon]);
-
-  // Load any saved team once on mount. This has to run in an effect (not a
-  // lazy useState initializer) because localStorage doesn't exist during
-  // Next.js's server render of this client component — reading it during
-  // the initial render would mismatch the server-rendered (empty) HTML and
-  // trigger a hydration error, which is worse than the lint rule below.
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw) as unknown;
-        if (Array.isArray(parsed) && parsed.length === TEAM_SIZE) {
-          // eslint-disable-next-line react-hooks/set-state-in-effect -- reading a client-only external source (localStorage) after mount, not synchronizing derived state
-          setTeam(parsed as Team);
-        }
-      }
-    } catch {
-      // Corrupt/unavailable storage — just start with an empty team.
-    }
-    setLoaded(true);
-  }, []);
-
-  // Save on every change, but not before the initial load finishes (that
-  // would overwrite a saved team with the empty starting state).
-  useEffect(() => {
-    if (!loaded) return;
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(team));
-    } catch {
-      // Ignore write failures (e.g. storage disabled/full).
-    }
-  }, [team, loaded]);
-
-  const violations = useMemo(() => validateTeam(team, pokemonById), [team, pokemonById]);
-
-  const coverage = useMemo(() => {
-    const defendTypes = team
-      .filter((member): member is TeamMember => member !== null)
-      .map((member) => pokemonById[member.pokemonId]?.types ?? []);
-    return computeTeamTypeCoverage(defendTypes);
-  }, [team, pokemonById]);
 
   const filteredPicker = useMemo(() => {
     const trimmed = query.trim().toLowerCase();
@@ -89,9 +46,9 @@ export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
   }
 
   function selectPokemon(slotIndex: number, pokemonId: string) {
-    setTeam((prev) => {
+    setSlots((prev) => {
       const next = [...prev];
-      next[slotIndex] = { pokemonId, selectedItem: null };
+      next[slotIndex] = pokemonId;
       return next;
     });
     setActiveSlot(null);
@@ -99,37 +56,40 @@ export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
   }
 
   function removeSlot(slotIndex: number) {
-    setTeam((prev) => {
+    setSlots((prev) => {
       const next = [...prev];
       next[slotIndex] = null;
       return next;
     });
   }
 
-  function setSlotItem(slotIndex: number, item: string) {
-    setTeam((prev) => {
-      const current = prev[slotIndex];
-      if (!current) return prev;
-      const next = [...prev];
-      next[slotIndex] = { ...current, selectedItem: item || null };
-      return next;
-    });
-  }
-
-  function clearTeam() {
-    setTeam(emptyTeam());
+  function clearAll() {
+    setSlots(emptySlots());
     setActiveSlot(null);
     setQuery("");
   }
 
-  const hasAnyMember = team.some((member) => member !== null);
-  const weakTypes = coverage.filter((c) => c.weakCount > 0).sort((a, b) => b.weakCount - a.weakCount);
-  const resistTypes = coverage
-    .filter((c) => c.resistCount > 0)
-    .sort((a, b) => b.resistCount - a.resistCount);
-  const immuneTypes = coverage
-    .filter((c) => c.immuneCount > 0)
-    .sort((a, b) => b.immuneCount - a.immuneCount);
+  const selectedPokemon = slots
+    .filter((id): id is string => id !== null)
+    .map((id) => pokemonById[id])
+    .filter((p): p is PokemonEntry => p !== undefined);
+
+  const moveTypes = useMemo(() => {
+    const types: PokemonType[] = [];
+    for (const p of selectedPokemon) {
+      for (const move of p.commonMoves) {
+        const type = getMoveType(move);
+        if (type) types.push(type);
+      }
+    }
+    return types;
+  }, [selectedPokemon]);
+
+  const coverage = useMemo(() => computeOffensiveTypeCoverage(moveTypes), [moveTypes]);
+
+  const hasAnySelection = selectedPokemon.length > 0;
+  const effectiveTypes = coverage.filter((c) => c.effectiveCount > 0);
+  const noCoverageTypes = coverage.filter((c) => c.effectiveCount === 0);
 
   return (
     <div className="mt-6 space-y-6">
@@ -138,10 +98,10 @@ export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
       </p>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {team.map((member, index) => {
-          const p = member ? pokemonById[member.pokemonId] : null;
+        {slots.map((pokemonId, index) => {
+          const p = pokemonId ? pokemonById[pokemonId] : null;
 
-          if (!p || !member) {
+          if (!p) {
             return (
               <button
                 key={index}
@@ -195,22 +155,6 @@ export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
                   <X size={16} />
                 </button>
               </div>
-
-              <label className="block text-xs text-text-secondary">
-                Item
-                <select
-                  value={member.selectedItem ?? ""}
-                  onChange={(event) => setSlotItem(index, event.target.value)}
-                  className="mt-1 block w-full rounded-md border border-border-default bg-bg-page px-2 py-1.5 text-sm text-text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-                >
-                  <option value="">No item</option>
-                  {p.commonItems.map((item) => (
-                    <option key={item} value={item}>
-                      {item}
-                    </option>
-                  ))}
-                </select>
-              </label>
 
               <div>
                 <span className="text-xs text-text-secondary">Common moves</span>
@@ -275,61 +219,47 @@ export function TeamBuilder({ pokemon }: { pokemon: PokemonEntry[] }) {
       ) : null}
 
       <div className="rounded-md border border-border-default bg-bg-surface p-4">
-        <h2 className="font-semibold">Team rules</h2>
-        {violations.length > 0 ? (
-          <ul className="mt-2 space-y-1.5 text-sm text-text-secondary">
-            {violations.map((violation, index) => (
-              <li key={index} className="flex gap-2">
-                <span aria-hidden="true">⚠</span>
-                <span>{violation.message}</span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-2 text-sm text-text-secondary">
-            {hasAnyMember
-              ? "No rule violations — your team is Regulation M-B legal."
-              : "Add Pokémon to check for rule violations."}
-          </p>
-        )}
-      </div>
-
-      <div className="rounded-md border border-border-default bg-bg-surface p-4">
-        <h2 className="font-semibold">Type coverage</h2>
-        {hasAnyMember ? (
-          <div className="mt-2 space-y-1.5 text-sm text-text-secondary">
-            <p>
-              <span className="font-medium text-text-primary">Weak to:</span>{" "}
-              {weakTypes.length > 0
-                ? weakTypes.map((t) => `${capitalize(t.type)} (${t.weakCount})`).join(", ")
-                : "Nothing notable"}
-            </p>
-            <p>
-              <span className="font-medium text-text-primary">Resists:</span>{" "}
-              {resistTypes.length > 0
-                ? resistTypes.map((t) => `${capitalize(t.type)} (${t.resistCount})`).join(", ")
-                : "Nothing yet"}
-            </p>
-            <p>
-              <span className="font-medium text-text-primary">Immune to:</span>{" "}
-              {immuneTypes.length > 0
-                ? immuneTypes.map((t) => `${capitalize(t.type)} (${t.immuneCount})`).join(", ")
-                : "Nothing yet"}
-            </p>
+        <h2 className="font-semibold">Offensive type coverage</h2>
+        {hasAnySelection ? (
+          <div className="mt-3 space-y-3">
+            <div>
+              <p className="text-sm font-medium text-text-primary">Super effective against</p>
+              <div className="mt-1.5 flex flex-wrap gap-1.5">
+                {effectiveTypes.length > 0 ? (
+                  effectiveTypes.map((c) => <TypeBadge key={c.type} type={c.type} />)
+                ) : (
+                  <span className="text-sm text-text-secondary">
+                    None of your moves hit anything super effectively yet.
+                  </span>
+                )}
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-text-primary">No coverage against</p>
+              <div className="mt-1.5 flex flex-wrap gap-1.5">
+                {noCoverageTypes.length > 0 ? (
+                  noCoverageTypes.map((c) => <TypeBadge key={c.type} type={c.type} />)
+                ) : (
+                  <span className="text-sm text-text-secondary">
+                    Nothing — your moves cover every type.
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
         ) : (
           <p className="mt-2 text-sm text-text-secondary">
-            Add Pokémon to see your team&apos;s type coverage.
+            Add Pokémon to see which types your moves cover.
           </p>
         )}
       </div>
 
       <button
         type="button"
-        onClick={clearTeam}
+        onClick={clearAll}
         className="rounded-md border border-border-default px-4 py-2.5 text-sm font-medium text-text-secondary transition-colors hover:border-accent hover:text-accent"
       >
-        Clear team
+        Clear selection
       </button>
     </div>
   );

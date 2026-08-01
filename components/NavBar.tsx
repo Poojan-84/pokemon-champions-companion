@@ -44,6 +44,12 @@ export function NavBar() {
           >
             Team Builder
           </Link>
+          <Link
+            href="/type-coverage"
+            className="inline-flex items-center whitespace-nowrap py-2.5 text-sm font-medium text-text-secondary hover:text-accent hover:underline"
+          >
+            Type Coverage
+          </Link>
         </div>
       </nav>
       <div role="search" className="mx-auto max-w-3xl px-4 pb-3">

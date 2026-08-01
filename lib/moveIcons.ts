@@ -1,5 +1,6 @@
 import { Sword, Sparkles, Shield, type LucideIcon } from "lucide-react";
 import { TYPE_ICON_COLORS } from "./typeIconColors";
+import type { PokemonType } from "./typeChart";
 
 export type MoveCategory = "physical" | "special" | "status";
 
@@ -11,7 +12,7 @@ const CATEGORY_ICONS: Record<MoveCategory, LucideIcon> = {
 
 interface MoveInfo {
   category: MoveCategory;
-  type: string;
+  type: PokemonType;
 }
 
 // Hand-curated from official game data (category + type per move) — our
@@ -87,4 +88,12 @@ export function getMoveIcon(move: string): { Icon: LucideIcon; colorClass: strin
     Icon: CATEGORY_ICONS[info.category],
     colorClass: TYPE_ICON_COLORS[info.type] ?? "text-text-secondary",
   };
+}
+
+// A status move (e.g. Protect, Trick Room) has no attacking type — returns
+// null so callers computing offensive type coverage can skip it.
+export function getMoveType(move: string): PokemonType | null {
+  const info = MOVE_INFO[move];
+  if (!info || info.category === "status") return null;
+  return info.type;
 }

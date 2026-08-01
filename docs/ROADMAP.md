@@ -21,12 +21,13 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - **Phase 1 (Foundation) complete** — all 10 milestones shipped
 - Deeper "Neon Competitive" palette update, gradient stat bars (red -> orange -> light-green -> dark-green, interpolated by value), custom move/item/ability icon system (lucide-react, no game assets), homepage feature grid (live tiles for Pokédex/Tier List/Guides + non-interactive "Coming soon" tiles for unbuilt Phase 2 tools) — see DECISION_LOG.md
 - **Team Builder (first Phase 2 milestone shipped)**: /team-builder — 6-Pokémon team grid, live validation against Regulation M-B rules (species clause, duplicate items, one Mega Stone max), type coverage summary via lib/typeChart.ts, localStorage persistence. Scoped to current 20-Pokémon database, curated items/moves only, no accounts yet (see DECISION_LOG.md for the scope reasoning). Homepage feature grid updated — Team Builder now live, not "Coming soon"
+- **Type Coverage Checker (second Phase 2 milestone shipped)**: /type-coverage — pick up to 6 Pokémon, see which of the 18 types their commonMoves hit for super-effective damage vs. which have no coverage at all. Offensive counterpart to Team Builder's defensive type coverage summary; reuses Team Builder's picker UI pattern but with no persistence and no Regulation M-B rule checks, since it's a standalone utility (see DECISION_LOG.md). NavBar and homepage feature grid updated — Type Coverage now live, not "Coming soon"
 
 ### Current 🚧
-(none — Team Builder just shipped; next Phase 2 item not yet chosen)
+(none — Type Coverage Checker just shipped; next Phase 2 item not yet chosen)
 
 ### Next ⏭️
-- Phase 2 (Tools), remaining and unordered until we decide on sequencing: rental team directory (redefined — see Phase 2 milestones below), matchup pages, type coverage checker, speed calculator, guide page visual polish, visual identity pass, per-Pokémon meta builds
+- Phase 2 (Tools), remaining and unordered until we decide on sequencing: rental team directory (redefined — see Phase 2 milestones below), matchup pages, speed calculator, guide page visual polish, visual identity pass, per-Pokémon meta builds
 
 ## Phase 1 milestones (Foundation) — ✅ COMPLETE
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -42,9 +43,9 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 
 ## Phase 2 milestones (Tools) — planning, sequencing not yet decided
 - ~~Team builder MVP~~ — shipped, see Completed above
+- ~~Type coverage checker~~ — shipped, see Completed above
 - Rental team directory — redefined: curated, usage-ranked real teams (both 2-3 piece cores and full 6-Pokémon teams) sourced from tournament data. Effectively a "team tier list," distinct from the existing Pokémon-level Tier List — addresses founder feedback that Pokémon-level tiers alone don't show what's actually winning together
 - Matchup pages
-- Type coverage checker
 - Speed calculator
 - Guide page visual polish — callout boxes, section iconography, pull-quote treatment for existing guides
 - Visual identity pass — dedicated design pass across Pokédex/detail pages (palette, typography, spacing) beyond the current functional/accessible baseline

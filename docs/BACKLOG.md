@@ -1,7 +1,7 @@
 # Current Tasks / Backlog
 
 ## In progress
-(nothing — Team Builder just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
+(nothing — Type Coverage Checker just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
 
 ## Up next
 (TBD — see ROADMAP.md Phase 2 planning)
@@ -27,12 +27,13 @@
 - [x] Deeper palette update, gradient stat bars, custom move/item/ability icon system, homepage feature grid (live + "Coming soon" tiles)
 - [x] Team Builder (/team-builder — 6-Pokémon team grid, Regulation M-B validation, type coverage summary, localStorage persistence, homepage grid updated to link it live)
 - [x] Added Tyranitar and Excadrill to the Pokédex database (fetched via scripts/fetch-pokemon.ts, curated fields hand-filled) and linked both inline from the Team Archetypes guide's Sand Offense section
+- [x] Type Coverage Checker (/type-coverage — pick up to 6 Pokémon, see offensive type coverage from their commonMoves; NavBar + homepage grid updated to link it live)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 (none currently — see ROADMAP.md Phase 2 planning for what's up next)
 
 ## Icebox (Phase 2/3 — do not start early)
-- Rental directory, matchup pages, type coverage checker, speed calculator
+- Rental directory, matchup pages, speed calculator
 - Per-Pokémon meta builds (teammates, item %, move %, stat spreads, Mega toggle) — needs its own data-source decision before implementation; revisits the Phase 1 "no automated usage-stat sourcing" decision (see DECISION_LOG.md)
 - Damage calculator, tournament tracking, usage stats, user accounts, personalization
 - Battle pass / ranked status homepage tiles — deferred to end of Phase 3; no official API for personal player data, so informational-guide-only if built at all (see ROADMAP.md Phase 3 notes)
