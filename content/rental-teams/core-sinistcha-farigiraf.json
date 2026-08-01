@@ -1,0 +1,9 @@
+{
+  "id": "core-sinistcha-farigiraf",
+  "name": "Sinistcha + Farigiraf",
+  "type": "core",
+  "pokemonIds": ["sinistcha", "farigiraf"],
+  "archetype": "trick-room",
+  "summary": "Two independent Trick Room setters. If one goes down, the other can still flip the field, while Sinistcha's Rage Powder and Farigiraf's Helping Hand protect your sweepers.",
+  "sourceNote": "Common Trick Room redundancy structure — not backed by a specific usage stat, flagging for your review before publishing"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "core-excadrill-tyranitar",
+  "name": "Excadrill + Tyranitar",
+  "type": "core",
+  "pokemonIds": ["excadrill", "tyranitar"],
+  "archetype": "sand-offense",
+  "summary": "Tyranitar passively whips up a sandstorm, which doubles Excadrill's Speed through Sand Rush and turns it into one of the fastest attackers in the format.",
+  "sourceNote": "Classic sand-offense pairing — same archetype covered in our Team Archetypes guide"
+}

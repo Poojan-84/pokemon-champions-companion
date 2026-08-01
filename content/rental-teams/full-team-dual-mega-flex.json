@@ -1,0 +1,9 @@
+{
+  "id": "full-team-dual-mega-flex",
+  "name": "Dual-Mega Flex (Aerodactyl + Charizard)",
+  "type": "full-team",
+  "pokemonIds": ["charizard", "farigiraf", "kingambit", "sylveon", "aerodactyl", "garchomp"],
+  "archetype": null,
+  "summary": "Runs two possible Mega Evolutions for flexibility, with Farigiraf able to switch the team between fast Tailwind mode and slow Trick Room mode depending on matchup.",
+  "sourceNote": "Real Reg M-B tournament roster; structure also described in Pokémon's official Regulation M-B meta overview"
+}

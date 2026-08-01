@@ -1,0 +1,9 @@
+{
+  "id": "full-team-sun-offense-support",
+  "name": "Sun Offense — Support Build",
+  "type": "full-team",
+  "pokemonIds": ["charizard", "garchomp", "whimsicott", "kingambit", "incineroar", "floette-eternal"],
+  "archetype": "sun-offense",
+  "summary": "A support-heavy Sun Offense build. Whimsicott's Tailwind and Incineroar's Fake Out/Parting Shot buy time for Charizard, Garchomp, Kingambit, and Floette to do the damage.",
+  "sourceNote": "Real 6-Pokémon roster from the Intimidators Champions Challenge #23 (Reg M-B) tournament"
+}

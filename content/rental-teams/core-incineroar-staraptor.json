@@ -1,0 +1,9 @@
+{
+  "id": "core-incineroar-staraptor",
+  "name": "Incineroar + Staraptor",
+  "type": "core",
+  "pokemonIds": ["incineroar", "staraptor"],
+  "archetype": null,
+  "summary": "Two of the format's most-used support Pokémon. Incineroar's Fake Out and Parting Shot combine with Staraptor's Intimidate and Tailwind to clear the way for a sweeper.",
+  "sourceNote": "Frequent teammate pairing per Reg M-B usage data (Pikalytics)"
+}

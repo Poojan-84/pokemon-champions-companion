@@ -72,11 +72,6 @@ export default function RentalTeamsPage() {
         </Link>
         .
       </p>
-      <p className="mt-4 rounded-md border border-border-default bg-bg-surface p-3 text-sm text-text-secondary">
-        This directory is a v1 seed — currently one placeholder entry while
-        we curate real tournament-sourced teams. Check back soon.
-      </p>
-
       <section className="mt-6">
         <h2 className="text-lg font-bold">Cores</h2>
         {cores.length > 0 ? (

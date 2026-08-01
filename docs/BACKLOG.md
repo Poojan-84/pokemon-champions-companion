@@ -1,7 +1,7 @@
 # Current Tasks / Backlog
 
 ## In progress
-(nothing — Rental Team Directory v1 just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
+(nothing — Rental Team Directory real content pass just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
 
 ## Up next
 (TBD — see ROADMAP.md Phase 2 planning)
@@ -29,9 +29,10 @@
 - [x] Added Tyranitar and Excadrill to the Pokédex database (fetched via scripts/fetch-pokemon.ts, curated fields hand-filled) and linked both inline from the Team Archetypes guide's Sand Offense section
 - [x] Type Coverage Checker (/type-coverage — pick up to 6 Pokémon, see offensive type coverage from their commonMoves; NavBar + homepage grid updated to link it live)
 - [x] Rental Team Directory v1 (/rental-teams — Cores + Full Teams sections, content-as-data in content/rental-teams/*.json validated against real Pokémon ids, archetype links into /guides/team-archetypes; NavBar + homepage grid updated to link it live)
+- [x] Replaced the Rental Team Directory's placeholder with 8 real curated entries (5 cores, 3 full teams) sourced from Reg M-B tournament/usage data — see DECISION_LOG.md
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
-- [ ] Replace the Rental Team Directory's single placeholder entry (content/rental-teams/placeholder-example.json) with real curated cores/full-teams — v1 shipped intentionally scoped to one seed entry, see DECISION_LOG.md
+- [ ] Add a Rain full team and a second Sand Offense full team to the Rental Team Directory once a verified real roster using only our 22 curated Pokémon is found (every real Rain team found so far includes Venusaur, which isn't in our database) — see DECISION_LOG.md
 
 ## Icebox (Phase 2/3 — do not start early)
 - Matchup pages, speed calculator

@@ -22,13 +22,14 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Deeper "Neon Competitive" palette update, gradient stat bars (red -> orange -> light-green -> dark-green, interpolated by value), custom move/item/ability icon system (lucide-react, no game assets), homepage feature grid (live tiles for Pokédex/Tier List/Guides + non-interactive "Coming soon" tiles for unbuilt Phase 2 tools) — see DECISION_LOG.md
 - **Team Builder (first Phase 2 milestone shipped)**: /team-builder — 6-Pokémon team grid, live validation against Regulation M-B rules (species clause, duplicate items, one Mega Stone max), type coverage summary via lib/typeChart.ts, localStorage persistence. Scoped to current 20-Pokémon database, curated items/moves only, no accounts yet (see DECISION_LOG.md for the scope reasoning). Homepage feature grid updated — Team Builder now live, not "Coming soon"
 - **Type Coverage Checker (second Phase 2 milestone shipped)**: /type-coverage — pick up to 6 Pokémon, see which of the 18 types their commonMoves hit for super-effective damage vs. which have no coverage at all. Offensive counterpart to Team Builder's defensive type coverage summary; reuses Team Builder's picker UI pattern but with no persistence and no Regulation M-B rule checks, since it's a standalone utility (see DECISION_LOG.md). NavBar and homepage feature grid updated — Type Coverage now live, not "Coming soon"
-- **Rental Team Directory v1 (third Phase 2 milestone shipped)**: /rental-teams — curated team cores and full 6-Pokémon teams, content-as-data in `content/rental-teams/*.json` (same pattern as `content/pokemon/*.json`), validated at load time against real Pokémon ids. Two sections (Cores first, then Full Teams, per the 30-second rule), each entry cross-links its Pokémon to `/pokedex/[id]` and links its archetype (if set) to the matching `/guides/team-archetypes` section anchor. **Shipped with exactly one placeholder entry** — real curated tournament-sourced content is still pending (see DECISION_LOG.md for the scope call). NavBar and homepage feature grid updated — Rental Teams now live, not "Coming soon"
+- **Rental Team Directory v1 (third Phase 2 milestone shipped)**: /rental-teams — curated team cores and full 6-Pokémon teams, content-as-data in `content/rental-teams/*.json` (same pattern as `content/pokemon/*.json`), validated at load time against real Pokémon ids. Two sections (Cores first, then Full Teams, per the 30-second rule), each entry cross-links its Pokémon to `/pokedex/[id]` and links its archetype (if set) to the matching `/guides/team-archetypes` section anchor. NavBar and homepage feature grid updated — Rental Teams now live, not "Coming soon"
+- **Rental Team Directory real content pass**: the v1 placeholder replaced with 8 entries (5 cores, 3 full teams) sourced from real Reg M-B tournament/usage data (Pikalytics, Pokémon Zone, Pokémon's official meta overview) — see DECISION_LOG.md for the full entry list, sourcing, and known gaps (Rain and a second Sand Offense full team not yet included — no verified real roster found using only our 22 curated Pokémon)
 
 ### Current 🚧
-(none — Rental Team Directory v1 just shipped; next Phase 2 item not yet chosen)
+(none — Rental Team Directory real content pass just shipped; next Phase 2 item not yet chosen)
 
 ### Next ⏭️
-- Phase 2 (Tools), remaining and unordered until we decide on sequencing: real Rental Team Directory content (replace the v1 placeholder with curated cores/teams), matchup pages, speed calculator, guide page visual polish, visual identity pass, per-Pokémon meta builds
+- Phase 2 (Tools), remaining and unordered until we decide on sequencing: matchup pages, speed calculator, guide page visual polish, visual identity pass, per-Pokémon meta builds
 
 ## Phase 1 milestones (Foundation) — ✅ COMPLETE
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -45,7 +46,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 ## Phase 2 milestones (Tools) — planning, sequencing not yet decided
 - ~~Team builder MVP~~ — shipped, see Completed above
 - ~~Type coverage checker~~ — shipped, see Completed above
-- ~~Rental team directory~~ — v1 shipped with one placeholder entry, see Completed above. **Still needed:** real curated, usage-ranked teams (both 2-3 piece cores and full 6-Pokémon teams) sourced from tournament data, to replace the placeholder. Effectively a "team tier list," distinct from the existing Pokémon-level Tier List — addresses founder feedback that Pokémon-level tiers alone don't show what's actually winning together
+- ~~Rental team directory~~ — v1 shipped, then replaced with 8 real curated entries (5 cores, 3 full teams) sourced from Reg M-B tournament/usage data, see Completed above. Effectively a "team tier list," distinct from the existing Pokémon-level Tier List — addresses founder feedback that Pokémon-level tiers alone don't show what's actually winning together. **Still open:** a Rain full team and a second Sand Offense full team — no verified real roster found using only our 22 curated Pokémon (every real Rain team found includes Venusaur, not yet in our database)
 - Matchup pages
 - Speed calculator
 - Guide page visual polish — callout boxes, section iconography, pull-quote treatment for existing guides

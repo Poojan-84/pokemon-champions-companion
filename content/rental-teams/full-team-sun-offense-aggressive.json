@@ -1,0 +1,9 @@
+{
+  "id": "full-team-sun-offense-aggressive",
+  "name": "Sun Offense — Aggressive Variant",
+  "type": "full-team",
+  "pokemonIds": ["floette-eternal", "charizard", "kingambit", "whimsicott", "basculegion", "garchomp"],
+  "archetype": "sun-offense",
+  "summary": "Same Sun Offense core idea, swapping Incineroar for Basculegion for a more all-out attacking lineup with less dedicated support.",
+  "sourceNote": "Real roster piloted to a 14-2-0 record at Smogon VGC Major Live 2026 (Reg M-B)"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "core-charizard-garchomp-kingambit",
+  "name": "Charizard-Y / Garchomp / Kingambit",
+  "type": "core",
+  "pokemonIds": ["charizard", "garchomp", "kingambit"],
+  "archetype": "sun-offense",
+  "summary": "The most repeated three-Pokémon structure in the format. Kingambit adds a Swords Dance closer once Charizard and Garchomp have opened things up.",
+  "sourceNote": "Most repeated 3-Pokémon core in Reg M-B usage data (Pikalytics)"
+}

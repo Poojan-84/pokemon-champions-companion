@@ -1,0 +1,9 @@
+{
+  "id": "core-charizard-garchomp",
+  "name": "Mega Charizard Y + Garchomp",
+  "type": "core",
+  "pokemonIds": ["charizard", "garchomp"],
+  "archetype": "sun-offense",
+  "summary": "The format's most common two-Pokémon pairing. Mega Charizard Y sets its own sun for boosted Solar Beam and Heat Wave, while Garchomp handles the ground game underneath it.",
+  "sourceNote": "Most common 2-Pokémon core in Reg M-B usage data (Pikalytics)"
+}
