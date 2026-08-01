@@ -28,10 +28,14 @@ const LIVE_FEATURES = [
     href: "/guides",
     description: "Beginner-friendly guides to the current meta.",
   },
+  {
+    title: "Team Builder",
+    href: "/team-builder",
+    description: "Build a team and check rules + type coverage.",
+  },
 ];
 
 const COMING_SOON_FEATURES = [
-  "Team Builder",
   "Rental Team Directory",
   "Matchup Pages",
   "Type Coverage Checker",
