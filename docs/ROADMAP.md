@@ -13,12 +13,15 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Site shell: navigation (NavBar, mobile-first, no hamburger needed yet) + real homepage (per VISION.md, single CTA to /pokedex)
 - Search functionality: client-side instant search in NavBar, case-insensitive partial name match, no backend needed
 - Tier list page: /tier-list groups all Pokémon by tier (S -> D), compact scannable cards, linked from NavBar
+- SEO fundamentals: sitemap.xml, robots.txt, JSON-LD structured data, meta tag audit, internal cross-linking, canonical URLs (see DECISION_LOG.md)
+- Beginner competitive guide: Markdown-based guides system + real Beginner Overview content, linked from homepage and Guides index
+- Regulation summary page: /guides/regulation-m-b covers the current regulation's rules and end date, cross-linked with the Beginner Overview, Tier List, and Pokédex
 
 ### Current 🚧
-- Beginner competitive guide(s)
+- Team archetype guide(s)
 
 ### Next ⏭️
-- Regulation summary page(s)
+- Mobile QA pass + performance pass (Core Web Vitals)
 
 ## Phase 1 milestones (Foundation)
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -26,10 +29,10 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 3. [x] Pokémon database — data model + first ~20 Pokémon as content, plus /pokedex index and detail page template
 4. [x] Search functionality
 5. [x] Tier list page(s)
-6. [ ] Beginner competitive guide(s)
-7. [ ] Regulation summary page(s)
+6. [x] Beginner competitive guide(s)
+7. [x] Regulation summary page(s)
 8. [ ] Team archetype guide(s)
-9. [ ] SEO fundamentals: sitemap, structured data, meta tags, internal linking pass
+9. [x] SEO fundamentals: sitemap, structured data, meta tags, internal linking pass
 10. [ ] Mobile QA pass + performance pass (Core Web Vitals)
 
 ## Phase 2 milestones (Tools) — high level, detailed later
