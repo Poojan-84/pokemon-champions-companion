@@ -20,12 +20,13 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - Team archetype guide(s): /guides/team-archetypes covers four Reg M-B team structures (Sun Offense, Trick Room, Rain, Sand Offense), cross-linked with Tier List and Pokédex
 - **Phase 1 (Foundation) complete** — all 10 milestones shipped
 - Deeper "Neon Competitive" palette update, gradient stat bars (red -> orange -> light-green -> dark-green, interpolated by value), custom move/item/ability icon system (lucide-react, no game assets), homepage feature grid (live tiles for Pokédex/Tier List/Guides + non-interactive "Coming soon" tiles for unbuilt Phase 2 tools) — see DECISION_LOG.md
+- **Team Builder (first Phase 2 milestone shipped)**: /team-builder — 6-Pokémon team grid, live validation against Regulation M-B rules (species clause, duplicate items, one Mega Stone max), type coverage summary via lib/typeChart.ts, localStorage persistence. Scoped to current 20-Pokémon database, curated items/moves only, no accounts yet (see DECISION_LOG.md for the scope reasoning). Homepage feature grid updated — Team Builder now live, not "Coming soon"
 
 ### Current 🚧
-(none — Phase 1 is done; Phase 2 sequencing to be decided together before work starts)
+(none — Team Builder just shipped; next Phase 2 item not yet chosen)
 
 ### Next ⏭️
-- Phase 2 (Tools), unordered until we decide on sequencing: team builder, rental team directory (redefined — see Phase 2 milestones below), matchup pages, type coverage checker, speed calculator, guide page visual polish, visual identity pass
+- Phase 2 (Tools), remaining and unordered until we decide on sequencing: rental team directory (redefined — see Phase 2 milestones below), matchup pages, type coverage checker, speed calculator, guide page visual polish, visual identity pass, per-Pokémon meta builds
 
 ## Phase 1 milestones (Foundation) — ✅ COMPLETE
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -40,7 +41,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 10. [x] Mobile QA pass + performance pass (Core Web Vitals)
 
 ## Phase 2 milestones (Tools) — planning, sequencing not yet decided
-- Team builder MVP
+- ~~Team builder MVP~~ — shipped, see Completed above
 - Rental team directory — redefined: curated, usage-ranked real teams (both 2-3 piece cores and full 6-Pokémon teams) sourced from tournament data. Effectively a "team tier list," distinct from the existing Pokémon-level Tier List — addresses founder feedback that Pokémon-level tiers alone don't show what's actually winning together
 - Matchup pages
 - Type coverage checker
