@@ -1,0 +1,16 @@
+{
+  "id": "sand-offense-vs-sun-offense",
+  "archetypeA": "sand-offense",
+  "archetypeB": "sun-offense",
+  "favored": "A",
+  "confidence": "draft",
+  "summary": "Sand Offense's Rock and Ice coverage lands two separate 4x hits on Sun's fastest attackers, which is hard for Sun's more numerous but smaller 2x answers to fully offset — a lean toward Sand, but a close one.",
+  "keyFactors": [
+    "Tyranitar's Stone Edge and Excadrill's Rock Slide are both 4x effective against Charizard (Fire/Flying is a classic double Rock weakness).",
+    "Tyranitar's Ice Punch is a separate 4x hit on Garchomp (Dragon/Ground both weak to Ice) — Sand threatens two of Sun's three pieces for quadruple damage with moves it already runs.",
+    "Sun answers back with real coverage too: Garchomp's Earthquake is super effective against both Tyranitar and Excadrill, and Kingambit's Iron Head and Charizard's Solar Beam each hit Tyranitar for double damage.",
+    "Excadrill's Earthquake does nothing to Charizard (Flying is immune to Ground moves), so Sand's coverage isn't complete despite the two big weaknesses it does find."
+  ],
+  "representativePokemonA": ["tyranitar", "excadrill"],
+  "representativePokemonB": ["charizard", "garchomp", "kingambit"]
+}

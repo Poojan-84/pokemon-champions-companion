@@ -25,12 +25,13 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - **Rental Team Directory v1 (third Phase 2 milestone shipped)**: /rental-teams — curated team cores and full 6-Pokémon teams, content-as-data in `content/rental-teams/*.json` (same pattern as `content/pokemon/*.json`), validated at load time against real Pokémon ids. Two sections (Cores first, then Full Teams, per the 30-second rule), each entry cross-links its Pokémon to `/pokedex/[id]` and links its archetype (if set) to the matching `/guides/team-archetypes` section anchor. NavBar and homepage feature grid updated — Rental Teams now live, not "Coming soon"
 - **Rental Team Directory real content pass**: the v1 placeholder replaced with 8 entries (5 cores, 3 full teams) sourced from real Reg M-B tournament/usage data (Pikalytics, Pokémon Zone, Pokémon's official meta overview) — see DECISION_LOG.md for the full entry list, sourcing, and known gaps (Rain and a second Sand Offense full team not yet included — no verified real roster found using only our 22 curated Pokémon)
 - **Speed Calculator (fourth Phase 2 milestone shipped)**: /speed-calculator — compare 2-6 Pokémon's calculated Level 50 Speed stat and see who moves first, accounting for level/IV/EV/nature/item/paralysis plus team-wide Tailwind and Trick Room toggles. Full VGC-accurate stat math in `lib/speedCalc.ts` (pure, unit-testable), a simplified 3-way nature selector instead of a full 25-nature dropdown, and an explicit exclusion of ability-based speed modifiers (Sand Rush, etc.) flagged inline per-Pokémon rather than silently baked into a wrong number — see DECISION_LOG.md for the full reasoning. NavBar and homepage feature grid updated — Speed Calculator now live, not "Coming soon"
+- **Archetype vs. Archetype Matchup Pages v1 (fifth Phase 2 milestone shipped)**: /matchups (index) and /matchups/[slug] (6 detail pages) — every archetype-vs-archetype pairing among the four current Team Archetypes guide entries (Sun Offense, Rain, Sand Offense, Trick Room), each with a verdict (A/B/even), 2-4 key factors grounded in real `lib/typeChart.ts` effectiveness math and each archetype's actual representative Pokémon, and cross-links to `/guides/team-archetypes` and relevant Rental Team entries. Ships archetype-vs-archetype only (not Pokémon-vs-Pokémon or core-vs-core), and every entry carries `"confidence": "draft"` with a prominent "pending founder review" banner on every page — see DECISION_LOG.md for the scope call and why draft status is load-bearing here, plus **the founder needs to review the 6 verdicts and their key factors before this is treated as real competitive guidance** (flagged in the PR/session notes, not something code review alone can validate). NavBar and homepage feature grid updated — Matchups now live, not "Coming soon"
 
 ### Current 🚧
-(none — Speed Calculator just shipped; next Phase 2 item not yet chosen)
+(none — Matchup Pages v1 just shipped, pending founder review of the actual verdicts; next Phase 2 item not yet chosen)
 
 ### Next ⏭️
-- Phase 2 (Tools), remaining and unordered until we decide on sequencing: matchup pages, guide page visual polish, visual identity pass, per-Pokémon meta builds
+- Phase 2 (Tools), remaining and unordered until we decide on sequencing: guide page visual polish, visual identity pass, per-Pokémon meta builds
 
 ## Phase 1 milestones (Foundation) — ✅ COMPLETE
 1. [x] Dev environment ready (Git, Node, editor, terminal comfort)
@@ -48,7 +49,7 @@ Update this file after every completed milestone. Format: Completed ✅ / Curren
 - ~~Team builder MVP~~ — shipped, see Completed above
 - ~~Type coverage checker~~ — shipped, see Completed above
 - ~~Rental team directory~~ — v1 shipped, then replaced with 8 real curated entries (5 cores, 3 full teams) sourced from Reg M-B tournament/usage data, see Completed above. Effectively a "team tier list," distinct from the existing Pokémon-level Tier List — addresses founder feedback that Pokémon-level tiers alone don't show what's actually winning together. **Still open:** a Rain full team and a second Sand Offense full team — no verified real roster found using only our 22 curated Pokémon (every real Rain team found includes Venusaur, not yet in our database)
-- Matchup pages
+- ~~Matchup pages~~ — v1 shipped (archetype-vs-archetype, all 6 pairings), see Completed above. Pokémon-vs-Pokémon and core-vs-core matchup granularity deferred — see DECISION_LOG.md
 - ~~Speed calculator~~ — shipped, see Completed above
 - Guide page visual polish — callout boxes, section iconography, pull-quote treatment for existing guides
 - Visual identity pass — dedicated design pass across Pokédex/detail pages (palette, typography, spacing) beyond the current functional/accessible baseline

@@ -1,0 +1,16 @@
+{
+  "id": "rain-vs-trick-room",
+  "archetypeA": "rain",
+  "archetypeB": "trick-room",
+  "favored": "even",
+  "confidence": "draft",
+  "summary": "Rain's coverage looks clearly ahead on paper — Sinistcha and Incineroar both take double damage from multiple Rain attacks — but Trick Room's entire premise is moving first regardless of raw power, so a well-timed Matcha Gotcha can undo that math before it matters.",
+  "keyFactors": [
+    "Pelipper's Hurricane and Swampert's Ice Punch are both super effective against Sinistcha — Rain has two independent ways to threaten Trick Room's setter.",
+    "Swampert's Wave Crash and Earthquake are both super effective against Incineroar too, giving Rain broad coverage across two of the three Trick Room pieces.",
+    "Sinistcha's Matcha Gotcha is a 4x hit on Swampert (Water/Ground both weak to Grass) — if Trick Room is already up when it fires, this alone can flip the exchange.",
+    "Farigiraf takes nothing worse than neutral damage from any of Rain's common moves, making it the safer Trick Room piece to lead with into this matchup."
+  ],
+  "representativePokemonA": ["pelipper", "archaludon", "swampert"],
+  "representativePokemonB": ["sinistcha", "incineroar", "farigiraf"]
+}

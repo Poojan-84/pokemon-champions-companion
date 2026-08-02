@@ -45,3 +45,15 @@ export interface RentalTeamEntry {
   summary: string;
   sourceNote: string;
 }
+
+export interface MatchupEntry {
+  id: string;
+  archetypeA: string;
+  archetypeB: string;
+  favored: "A" | "B" | "even";
+  confidence: "draft";
+  summary: string;
+  keyFactors: string[];
+  representativePokemonA: string[];
+  representativePokemonB: string[];
+}

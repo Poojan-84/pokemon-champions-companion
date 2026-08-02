@@ -1,0 +1,16 @@
+{
+  "id": "sun-offense-vs-trick-room",
+  "archetypeA": "sun-offense",
+  "archetypeB": "trick-room",
+  "favored": "A",
+  "confidence": "draft",
+  "summary": "The mirror image of Sand Offense's matchup against Trick Room — Kingambit's Dark-type moves alone threaten two of the three Trick Room representatives, and Farigiraf's Psychic is immune against Kingambit specifically, leaving Trick Room with only one clean answer.",
+  "keyFactors": [
+    "Kingambit's Kowtow Cleave and Sucker Punch are both super effective against Sinistcha and Farigiraf — the same one-move, two-target pattern Sand Offense has against this archetype.",
+    "Charizard's Heat Wave and Weather Ball are super effective against Sinistcha too, and Garchomp's Earthquake and Rock Slide are both super effective against Incineroar — Sun's coverage reaches every Trick Room piece at least once.",
+    "Farigiraf's Psychic does nothing to Kingambit (Dark types are immune to Psychic moves), removing one of Trick Room's three attackers from this exchange entirely.",
+    "Incineroar's Flare Blitz is Trick Room's one solid answer, hitting Kingambit for double damage — but it's a single point of pressure against a much broader kit."
+  ],
+  "representativePokemonA": ["charizard", "garchomp", "kingambit"],
+  "representativePokemonB": ["sinistcha", "incineroar", "farigiraf"]
+}

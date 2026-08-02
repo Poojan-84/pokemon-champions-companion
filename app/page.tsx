@@ -48,9 +48,14 @@ const LIVE_FEATURES = [
     href: "/speed-calculator",
     description: "Compare Pokémon and see who moves first.",
   },
+  {
+    title: "Matchups",
+    href: "/matchups",
+    description: "See how the current team archetypes stack up.",
+  },
 ];
 
-const COMING_SOON_FEATURES = ["Matchup Pages"];
+const COMING_SOON_FEATURES: string[] = [];
 
 export default function Home() {
   return (

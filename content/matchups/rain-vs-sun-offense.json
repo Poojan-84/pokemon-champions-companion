@@ -1,0 +1,16 @@
+{
+  "id": "rain-vs-sun-offense",
+  "archetypeA": "rain",
+  "archetypeB": "sun-offense",
+  "favored": "even",
+  "confidence": "draft",
+  "summary": "A genuine coin flip that comes down to which weather sticks. Swampert's Ice Punch is an unconditional 4x hit on Garchomp, but Sun's mirroring 4x answer only fires instantly while sun — not rain — is the active weather.",
+  "keyFactors": [
+    "Swampert's Ice Punch is 4x effective against Garchomp (Dragon/Ground is one of the game's most well-known double weaknesses) — no weather dependency, it just works.",
+    "Charizard's Solar Beam is a mirroring 4x hit on Swampert (Water/Ground both weak to Grass), but only skips its charge-up turn while sun is the active weather, which rain directly fights against.",
+    "Garchomp's Earthquake does nothing to Pelipper (Flying is immune to Ground moves), taking Sun's most reliable physical attacker out of that specific exchange.",
+    "Whichever side wins the 'last weather set' race effectively decides several of these exchanges — a genuinely close, execution-dependent matchup."
+  ],
+  "representativePokemonA": ["pelipper", "archaludon", "swampert"],
+  "representativePokemonB": ["charizard", "garchomp", "kingambit"]
+}

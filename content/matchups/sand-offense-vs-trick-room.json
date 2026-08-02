@@ -1,0 +1,16 @@
+{
+  "id": "sand-offense-vs-trick-room",
+  "archetypeA": "sand-offense",
+  "archetypeB": "trick-room",
+  "favored": "A",
+  "confidence": "draft",
+  "summary": "One of the more lopsided pairings on paper — Tyranitar alone finds double damage against all three Trick Room representatives, while Trick Room's best answers are single moves that don't overlap, and Farigiraf's signature move is flatly immune against Tyranitar.",
+  "keyFactors": [
+    "Tyranitar's Crunch is super effective against both Sinistcha and Farigiraf at once (Dark is strong against Ghost and Psychic) — one move, two answers.",
+    "Tyranitar's Ice Punch adds a second angle on Sinistcha, and Excadrill's Earthquake and Rock Slide are both super effective against Incineroar — every Trick Room piece has at least one real answer from Sand.",
+    "Farigiraf's Psychic does nothing to Tyranitar (Dark types are immune to Psychic moves) — one of Trick Room's three attackers is fully walled by Sand's setter.",
+    "Trick Room's real counter-argument is turn order, not type matchups: if Sinistcha sets Trick Room and swings first, Matcha Gotcha is still a 2x hit on Tyranitar before Sand gets to act."
+  ],
+  "representativePokemonA": ["tyranitar", "excadrill"],
+  "representativePokemonB": ["sinistcha", "incineroar", "farigiraf"]
+}

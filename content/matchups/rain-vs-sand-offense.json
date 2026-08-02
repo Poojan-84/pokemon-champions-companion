@@ -1,0 +1,16 @@
+{
+  "id": "rain-vs-sand-offense",
+  "archetypeA": "rain",
+  "archetypeB": "sand-offense",
+  "favored": "A",
+  "confidence": "draft",
+  "summary": "Rain edges this one out on paper — Swampert's Water/Ground coverage hits both Tyranitar and Excadrill for double damage, while Sand's best answer only reliably threatens Pelipper. Close enough that execution matters more than the raw type math.",
+  "keyFactors": [
+    "Swampert's Wave Crash and Earthquake are both super effective against Tyranitar and Excadrill — real double coverage from one Pokémon.",
+    "Tyranitar's Stone Edge is super effective against Pelipper specifically, so Sand Offense can pressure Rain's own weather-setter directly.",
+    "Excadrill's Earthquake does nothing to Pelipper (Ground moves can't hit Flying types) — Sand's most reliable attacker has a real hole in its coverage against Rain's setter.",
+    "Once sandstorm is up, Excadrill's Sand Rush roughly doubles its Speed — faster than anything on Rain's side, so a well-timed switch-in still threatens despite the type disadvantage."
+  ],
+  "representativePokemonA": ["pelipper", "archaludon", "swampert"],
+  "representativePokemonB": ["tyranitar", "excadrill"]
+}

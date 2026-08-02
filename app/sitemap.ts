@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPokemonIds } from "@/lib/pokemon";
 import { getAllGuides } from "@/lib/guides";
+import { getAllMatchups } from "@/lib/matchups";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/type-coverage`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/rental-teams`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/speed-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/matchups`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   ];
 
   const pokemonRoutes: MetadataRoute.Sitemap = getAllPokemonIds().map((id) => ({
@@ -31,5 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...pokemonRoutes, ...guideRoutes];
+  const matchupRoutes: MetadataRoute.Sitemap = getAllMatchups().map((matchup) => ({
+    url: `${SITE_URL}/matchups/${matchup.id}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...pokemonRoutes, ...guideRoutes, ...matchupRoutes];
 }

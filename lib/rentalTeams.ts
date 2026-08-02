@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { RentalTeamEntry } from "./types";
 import { getAllPokemonIds } from "./pokemon";
+import { ARCHETYPE_SLUGS } from "./archetypes";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "rental-teams");
 
@@ -26,6 +27,12 @@ function loadRentalTeam(id: string, validPokemonIds: Set<string>): RentalTeamEnt
   if (!VALID_TYPES.has(entry.type)) {
     throw new Error(
       `content/rental-teams/${id}.json has an invalid "type": "${entry.type}" — must be "core" or "full-team".`,
+    );
+  }
+
+  if (entry.archetype !== null && !ARCHETYPE_SLUGS.has(entry.archetype)) {
+    throw new Error(
+      `content/rental-teams/${id}.json has an invalid "archetype": "${entry.archetype}" — must be null or match a real content/guides/team-archetypes.md heading anchor.`,
     );
   }
 
@@ -55,12 +62,9 @@ export function getAllRentalTeams(): RentalTeamCollections {
   };
 }
 
-// "sand-offense" -> "Sand Offense" — archetype slugs are stored kebab-case
-// (matching the guide heading anchors they link to), this recovers a
-// display label without a separate lookup table to keep in sync.
-export function archetypeLabel(slug: string): string {
-  return slug
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+// Used by matchup detail pages to cross-link "Related Rental Teams" for
+// either archetype in the pairing.
+export function getRentalTeamsForArchetype(archetype: string): RentalTeamEntry[] {
+  const { cores, fullTeams } = getAllRentalTeams();
+  return [...cores, ...fullTeams].filter((entry) => entry.archetype === archetype);
 }

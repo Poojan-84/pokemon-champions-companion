@@ -1,7 +1,7 @@
 # Current Tasks / Backlog
 
 ## In progress
-(nothing — Speed Calculator just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
+(nothing — Matchup Pages v1 just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
 
 ## Up next
 (TBD — see ROADMAP.md Phase 2 planning)
@@ -31,12 +31,14 @@
 - [x] Rental Team Directory v1 (/rental-teams — Cores + Full Teams sections, content-as-data in content/rental-teams/*.json validated against real Pokémon ids, archetype links into /guides/team-archetypes; NavBar + homepage grid updated to link it live)
 - [x] Replaced the Rental Team Directory's placeholder with 8 real curated entries (5 cores, 3 full teams) sourced from Reg M-B tournament/usage data — see DECISION_LOG.md
 - [x] Speed Calculator (/speed-calculator — compare 2-6 Pokémon's calculated Speed and turn order, Tailwind/Trick Room/item/paralysis support, ability-modifier exclusion flagged inline; NavBar + homepage grid updated to link it live)
+- [x] Archetype vs. Archetype Matchup Pages v1 (/matchups + /matchups/[slug] — all 6 archetype pairings, verdicts grounded in real type-effectiveness math, cross-linked with Team Archetypes guide and Rental Teams; NavBar + homepage grid updated to link it live)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 - [ ] Add a Rain full team and a second Sand Offense full team to the Rental Team Directory once a verified real roster using only our 22 curated Pokémon is found (every real Rain team found so far includes Venusaur, which isn't in our database) — see DECISION_LOG.md
+- [ ] **Founder review needed**: all 6 Matchup Pages verdicts and key factors are `"confidence": "draft"` — read through `/matchups` and confirm the favored/even calls and reasoning before treating this as real competitive guidance (see DECISION_LOG.md)
 
 ## Icebox (Phase 2/3 — do not start early)
-- Matchup pages
+- Pokémon-vs-Pokémon and core-vs-core matchup granularity (deferred from Matchup Pages v1, see DECISION_LOG.md)
 - Per-Pokémon meta builds (teammates, item %, move %, stat spreads, Mega toggle) — needs its own data-source decision before implementation; revisits the Phase 1 "no automated usage-stat sourcing" decision (see DECISION_LOG.md)
 - Damage calculator, tournament tracking, usage stats, user accounts, personalization
 - Battle pass / ranked status homepage tiles — deferred to end of Phase 3; no official API for personal player data, so informational-guide-only if built at all (see ROADMAP.md Phase 3 notes)
