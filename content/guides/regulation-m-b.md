@@ -21,6 +21,10 @@ That's unusually open compared to past regulations in other Pokémon games, wher
 
 M-B also introduced **22 new Pokémon and 16 new Mega Evolutions** compared to the previous regulation, which is part of why the [Tier List](/tier-list) looks the way it does right now — a lot of new options entered the format at once.
 
+<div class="guide-highlight">
+<p><strong>22</strong> new Pokémon and <strong>16</strong> new Mega Evolutions</p>
+</div>
+
 ## Team-building rules to know
 
 A few rules apply no matter which Pokémon you pick:

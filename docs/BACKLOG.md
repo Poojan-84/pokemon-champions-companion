@@ -1,7 +1,7 @@
 # Current Tasks / Backlog
 
 ## In progress
-(nothing — Matchup Pages v1 just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
+(nothing — Guide page visual polish just shipped; next Phase 2 item not yet chosen, see ROADMAP.md)
 
 ## Up next
 (TBD — see ROADMAP.md Phase 2 planning)
@@ -32,6 +32,7 @@
 - [x] Replaced the Rental Team Directory's placeholder with 8 real curated entries (5 cores, 3 full teams) sourced from Reg M-B tournament/usage data — see DECISION_LOG.md
 - [x] Speed Calculator (/speed-calculator — compare 2-6 Pokémon's calculated Speed and turn order, Tailwind/Trick Room/item/paralysis support, ability-modifier exclusion flagged inline; NavBar + homepage grid updated to link it live)
 - [x] Archetype vs. Archetype Matchup Pages v1 (/matchups + /matchups/[slug] — all 6 archetype pairings, verdicts grounded in real type-effectiveness math, cross-linked with Team Archetypes guide and Rental Teams; NavBar + homepage grid updated to link it live)
+- [x] Guide page visual polish (audited all 3 guides' live rendered output — callout boxes and section iconography were already at 100% coverage; added the missing pull-quote/highlighted-stat treatment via a new `.guide-highlight` style, one per guide, quoting existing prose verbatim)
 
 ## Backlog (not started, unordered within this list — see ROADMAP.md for sequencing)
 - [ ] Add a Rain full team and a second Sand Offense full team to the Rental Team Directory once a verified real roster using only our 22 curated Pokémon is found (every real Rain team found so far includes Venusaur, which isn't in our database) — see DECISION_LOG.md

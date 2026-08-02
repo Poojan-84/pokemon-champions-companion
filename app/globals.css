@@ -81,3 +81,34 @@ body {
   color: var(--color-accent);
   flex-shrink: 0;
 }
+
+/* Pull-quote / highlighted-stat treatment for the single most
+   decision-relevant fact per guide. Deliberately distinct from .callout
+   (a friendly aside, left-accented) by being centered and bordered
+   top+bottom instead — a "the one thing to remember" beat, not a tip.
+   Embedded as raw HTML directly in guide Markdown, same technique as
+   .callout, and always quotes existing guide prose verbatim rather than
+   introducing new copy. Has no background-color of its own (inherits the
+   page's bg-page), so it reuses the already contrast-verified
+   text-primary/bg-page (18.46:1), accent/bg-page (12.61:1), and
+   border-default/bg-page (4.44:1 non-text) pairs — re-verified by pixel
+   sampling the live rendered output at a larger font size, since size
+   doesn't affect contrast but Tailwind v4's lab()/oklch() color output
+   means it's still worth checking rather than assuming. */
+.guide-highlight {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border-default);
+  border-bottom: 1px solid var(--color-border-default);
+}
+.guide-highlight p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+.guide-highlight strong {
+  color: var(--color-accent);
+}

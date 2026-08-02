@@ -51,4 +51,8 @@ Pelipper sets rain on entry, which boosts Water-type attacks and gives Hurricane
 
 Weather-setting Pokémon are strong right now, so teams built around exploiting weather are common. If you're building your first team, picking one weather archetype and building around it is a genuinely solid, low-complexity starting point.
 
+<div class="guide-highlight">
+<p>Picking <strong>one weather archetype</strong> and building around it is a genuinely solid, low-complexity starting point.</p>
+</div>
+
 Ready to try one? Browse the [Tier List](/tier-list) or look up any Pokémon mentioned here in the [Pokédex](/pokedex) to see its full details.

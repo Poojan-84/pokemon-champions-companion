@@ -20,6 +20,10 @@ A typical competitive match works like this:
 - Most competitive formats are **doubles** — two Pokémon per side on the field at once, not one — which means positioning and team synergy matter as much as raw power
 - Matches are often played as a **best-of-3** in tournaments, so you may need to adjust your team between games based on what you saw
 
+<div class="guide-highlight">
+<p><strong>Two Pokémon</strong> per side on the field at once, not one.</p>
+</div>
+
 ## What's "the meta," and why does it keep changing?
 
 You'll see the term **regulation** a lot on this site (like "Regulation M-B"). A regulation is simply the current rule set — which Pokémon are allowed, and sometimes other restrictions. When the regulation changes, some Pokémon become legal or illegal, which shifts what's strong. That shift is what people mean by "the meta."
